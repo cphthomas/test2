@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>test</title>
+  <meta name="description" content="test">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="test" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="test" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="test" />
+  
+  <meta name="twitter:description" content="test" />
+  
+
+<meta name="author" content="Thomas Petersen">
+
+
+<meta name="date" content="2018-08-01">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="prev" href="polynomier.html">
+<link rel="next" href="differentialregning.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="libs/htmlwidgets-1.2/htmlwidgets.js"></script>
+<script src="libs/proj4js-2.3.15/proj4.js"></script>
+<link href="libs/highcharts-5.0.6/css/motion.css" rel="stylesheet" />
+<script src="libs/highcharts-5.0.6/highstock.js"></script>
+<script src="libs/highcharts-5.0.6/highcharts-3d.js"></script>
+<script src="libs/highcharts-5.0.6/highcharts-more.js"></script>
+<script src="libs/highcharts-5.0.6/modules/annotations.js"></script>
+<script src="libs/highcharts-5.0.6/modules/broken-axis.js"></script>
+<script src="libs/highcharts-5.0.6/modules/data.js"></script>
+<script src="libs/highcharts-5.0.6/modules/drilldown.js"></script>
+<script src="libs/highcharts-5.0.6/modules/exporting.js"></script>
+<script src="libs/highcharts-5.0.6/modules/funnel.js"></script>
+<script src="libs/highcharts-5.0.6/modules/heatmap.js"></script>
+<script src="libs/highcharts-5.0.6/modules/map.js"></script>
+<script src="libs/highcharts-5.0.6/modules/no-data-to-display.js"></script>
+<script src="libs/highcharts-5.0.6/modules/offline-exporting.js"></script>
+<script src="libs/highcharts-5.0.6/modules/solid-gauge.js"></script>
+<script src="libs/highcharts-5.0.6/modules/treemap.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/annotations.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/draggable-legend.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/draggable-points.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/export-csv.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/grouped-categories.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/motion.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/pattern-fill-v2.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/tooltip-delay.js"></script>
+<script src="libs/highcharts-5.0.6/custom/reset.js"></script>
+<script src="libs/highcharts-5.0.6/custom/symbols-extra.js"></script>
+<script src="libs/highcharts-5.0.6/custom/text-symbols.js"></script>
+<link href="libs/fontawesome-4.5.0/font-awesome.min.css" rel="stylesheet" />
+<link href="libs/htmlwdgtgrid-1/htmlwdgtgrid.css" rel="stylesheet" />
+<script src="libs/highchart-binding-0.5.0/highchart.js"></script>
+<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="libs/datatables-binding-0.4/datatables.js"></script>
+<link href="libs/dt-core-1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.10.16/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.10.16/js/jquery.dataTables.min.js"></script>
+<link href="libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
+<link href="libs/dygraphs-1.1.1/dygraph.css" rel="stylesheet" />
+<script src="libs/dygraphs-1.1.1/dygraph-combined.js"></script>
+<script src="libs/moment-2.8.4/moment.js"></script>
+<script src="libs/moment-timezone-0.2.5/moment-timezone-with-data.js"></script>
+<script src="libs/moment-fquarter-1.0.0/moment-fquarter.min.js"></script>
+<script src="libs/dygraphs-binding-1.1.1.4/dygraphs.js"></script>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href=""https://tepedu.dk"">tepedu</a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#section"></a></li>
+<li class="chapter" data-level="1" data-path="indledning.html"><a href="indledning.html"><i class="fa fa-check"></i><b>1</b> Indledning</a></li>
+<li class="chapter" data-level="2" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html"><i class="fa fa-check"></i><b>2</b> Procenter, indekstal og regneregler</a><ul>
+<li class="chapter" data-level="2.1" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#procentregneregler"><i class="fa fa-check"></i><b>2.1</b> Procentregneregler</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#video-procentregning"><i class="fa fa-check"></i><b>2.1.1</b> Video procentregning</a></li>
+<li class="chapter" data-level="2.1.2" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#video-excel-basisvideo."><i class="fa fa-check"></i><b>2.1.2</b> Video Excel basisvideo.</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#indekstal"><i class="fa fa-check"></i><b>2.2</b> Indekstal</a></li>
+<li class="chapter" data-level="2.3" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#procentpoint"><i class="fa fa-check"></i><b>2.3</b> Procentpoint</a></li>
+<li class="chapter" data-level="2.4" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#reduktionsregneregler"><i class="fa fa-check"></i><b>2.4</b> Reduktionsregneregler</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#video-regnearternes-hieraki."><i class="fa fa-check"></i><b>2.4.1</b> Video regnearternes hieraki.</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#brkregneregler"><i class="fa fa-check"></i><b>2.5</b> Brøkregneregler</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#video-brkregneregler"><i class="fa fa-check"></i><b>2.5.1</b> Video Brøkregneregler</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#potensregneregler"><i class="fa fa-check"></i><b>2.6</b> Potensregneregler</a><ul>
+<li class="chapter" data-level="2.6.1" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#video-potensregneregler"><i class="fa fa-check"></i><b>2.6.1</b> Video potensregneregler</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html"><i class="fa fa-check"></i><b>3</b> Funktioner og ligninger</a><ul>
+<li class="chapter" data-level="3.1" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#linere-funktioner"><i class="fa fa-check"></i><b>3.1</b> Lineære funktioner</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#video-funktioner"><i class="fa fa-check"></i><b>3.1.1</b> Video funktioner</a></li>
+<li class="chapter" data-level="3.1.2" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#video-geogebra-hjlpeprogram-til-funktioner"><i class="fa fa-check"></i><b>3.1.2</b> Video Geogebra hjælpeprogram til funktioner</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#generel-forskift-linir-funktion"><i class="fa fa-check"></i><b>3.2</b> Generel Forskift liniær funktion</a></li>
+<li class="chapter" data-level="3.3" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#bestemmelse-af-forskrift-baseret-pa-2-punkter"><i class="fa fa-check"></i><b>3.3</b> Bestemmelse af forskrift baseret på 2 punkter</a></li>
+<li class="chapter" data-level="3.4" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#lsning-af-ligninger"><i class="fa fa-check"></i><b>3.4</b> Løsning af ligninger</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#video-lsning-af-ligninger"><i class="fa fa-check"></i><b>3.4.1</b> Video Løsning af ligninger</a></li>
+<li class="chapter" data-level="3.4.2" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#video-lsning-af-uligheder"><i class="fa fa-check"></i><b>3.4.2</b> Video Løsning af uligheder</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#ligninger-med-2-ubekendte."><i class="fa fa-check"></i><b>3.5</b> 2 ligninger med 2 ubekendte.</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#video-2-ligninger-med-2-ubekendte."><i class="fa fa-check"></i><b>3.5.1</b> Video 2 ligninger med 2 ubekendte.</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#udbuds--og-eftersprgselskurver"><i class="fa fa-check"></i><b>3.6</b> Udbuds- og efterspørgselskurver</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="polynomier.html"><a href="polynomier.html"><i class="fa fa-check"></i><b>4</b> Polynomier</a><ul>
+<li class="chapter" data-level="4.1" data-path="polynomier.html"><a href="polynomier.html#gradspolynomier"><i class="fa fa-check"></i><b>4.1</b> 2. Gradspolynomier</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="polynomier.html"><a href="polynomier.html#video-2.-gradspolynomier."><i class="fa fa-check"></i><b>4.1.1</b> Video 2. Gradspolynomier.</a></li>
+<li class="chapter" data-level="4.1.2" data-path="polynomier.html"><a href="polynomier.html#video-andengradsligninger."><i class="fa fa-check"></i><b>4.1.2</b> Video Andengradsligninger.</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="finansiel-regning.html"><a href="finansiel-regning.html"><i class="fa fa-check"></i><b>5</b> Finansiel regning</a><ul>
+<li class="chapter" data-level="5.0.1" data-path="finansiel-regning.html"><a href="finansiel-regning.html#nutidsvrdi-og-fremtidsvrdi-af-en-kapital"><i class="fa fa-check"></i><b>5.0.1</b> Nutidsværdi og fremtidsværdi af en kapital</a></li>
+<li class="chapter" data-level="5.1" data-path="finansiel-regning.html"><a href="finansiel-regning.html#annuiteter"><i class="fa fa-check"></i><b>5.1</b> Annuiteter</a></li>
+<li class="chapter" data-level="5.2" data-path="finansiel-regning.html"><a href="finansiel-regning.html#fremtidsvrdi-af-en-annuitet"><i class="fa fa-check"></i><b>5.2</b> Fremtidsværdi af en annuitet</a></li>
+<li class="chapter" data-level="5.3" data-path="finansiel-regning.html"><a href="finansiel-regning.html#nutidsvrdi-af-en-annuitet"><i class="fa fa-check"></i><b>5.3</b> Nutidsværdi af en annuitet</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="differentialregning.html"><a href="differentialregning.html"><i class="fa fa-check"></i><b>6</b> Differentialregning</a><ul>
+<li class="chapter" data-level="6.1" data-path="differentialregning.html"><a href="differentialregning.html#regneregler-differentiation"><i class="fa fa-check"></i><b>6.1</b> Regneregler differentiation</a></li>
+<li class="chapter" data-level="6.2" data-path="differentialregning.html"><a href="differentialregning.html#ekstremumspunkter"><i class="fa fa-check"></i><b>6.2</b> Ekstremumspunkter</a></li>
+<li class="chapter" data-level="6.3" data-path="differentialregning.html"><a href="differentialregning.html#lokale-og-globale-ekstremumspunkter"><i class="fa fa-check"></i><b>6.3</b> Lokale og globale ekstremumspunkter</a></li>
+<li class="chapter" data-level="6.4" data-path="differentialregning.html"><a href="differentialregning.html#konveksitet-og-konkavitet"><i class="fa fa-check"></i><b>6.4</b> Konveksitet og konkavitet</a></li>
+<li class="chapter" data-level="6.5" data-path="differentialregning.html"><a href="differentialregning.html#sammenhnge-avc-atc-tc-tr-mc-mr-og-mathbfpi"><i class="fa fa-check"></i><b>6.5</b> Sammenhænge AVC, ATC, TC, TR, MC, MR og <span class="math inline">\(\mathbf{\pi}\)</span></a></li>
+<li class="chapter" data-level="6.6" data-path="differentialregning.html"><a href="differentialregning.html#optimeringseksempel"><i class="fa fa-check"></i><b>6.6</b> Optimeringseksempel</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="excel-oversttelser.html"><a href="excel-oversttelser.html"><i class="fa fa-check"></i><b>7</b> Excel oversættelser</a></li>
+<li class="divider"></li>
+<li><a href="https://tepedu.dk" target="blank">tepedu</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">test</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="finansiel-regning" class="section level1">
+<h1><span class="header-section-number">Kapitel 5</span> Finansiel regning</h1>
+<br>
+<div class="embed-container">
+<iframe src="https://player.vimeo.com/video/282141416" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen>
+</iframe>
+</div>
+<p><br></p>
+<div id="nutidsvrdi-og-fremtidsvrdi-af-en-kapital" class="section level3">
+<h3><span class="header-section-number">5.0.1</span> Nutidsværdi og fremtidsværdi af en kapital</h3>
+<p>Vi benytter i finansiel regning vor viden fra eksponentielle funktioner, nedenstående eksempel viser hvordan sammenhængen er:</p>
+<p>En kapital på K<sub>0</sub> = 10.000 kr. sættes ind på en bankkonto, hvor der hvert år tilskrives en rente på 10%. Betegner vi kapitalens værdi efter 1 år med K<sub>1</sub> , er denne:</p>
+<p>K<sub>1</sub> =10.000⋅1,10=11.000 kr.</p>
+<p>da vi lægger 10 % til et tal ved at gange tallet med 1,10.</p>
+<p>Efter 2 år er kapitalens værdi vokset til</p>
+<p>K<sub>2</sub> =11.000⋅1,10=12.100 kr.</p>
+<p>og efter 3 år står der følgende beløb på bankkontoen</p>
+<p>K<sub>3</sub> =12.100⋅ 1,10=13.310 kr.</p>
+<p>Der gælder altså at:</p>
+<p>K<sub>1</sub> =K<sub>0</sub> ⋅ (1+r)</p>
+<p>K<sub>2</sub> =K<sub>1</sub> ⋅ (1+r)</p>
+<p>K<sub>3</sub> =K<sub>2</sub> ⋅ (1+r)</p>
+<p>Osv.</p>
+<p>Men dette kan vi skrive som:</p>
+<p>K<sub>1</sub> =K<sub>0</sub> ⋅ (1+r)</p>
+<p>K<sub>2</sub> =K<sub>0</sub> ⋅ (1+r)⋅(1+r)</p>
+<p>K<sub>3</sub> =K<sub>0</sub> ⋅ (1+r)⋅(1+r)⋅(1+r)</p>
+<p>Osv.</p>
+<p>Eller vha. Potensregnereglerne:</p>
+<p>K<sub>1</sub> =K<sub>0</sub> ⋅ (1+r)</p>
+<p>K<sub>2</sub> =K<sub>0</sub> ⋅ (1+r)<sup>2</sup></p>
+<p>K<sub>3</sub> =K<sub>0</sub> ⋅ (1+r)<sup>3</sup></p>
+<p><sup>.</sup></p>
+<p><sup>.</sup></p>
+<p><sup>.</sup></p>
+<p>K<sub>n</sub> =K<sub>0</sub> ⋅ (1+r)<sup>n</sup></p>
+<p>En mand sætter 10.000 ind på en konto med årlig rentetilskrivning 5%, hvad har han på kontoen efter 3, 13 og 30 år ?</p>
+<p><span class="math display">\[K_{3} = 10.000 \cdot {1,05}^{3} = 11.576,25\]</span></p>
+<p><span class="math display">\[K_{13} = 10.000 \cdot {1,05}^{13} = 18.856,49\]</span></p>
+<p><span class="math display">\[K_{30} = 10.000 \cdot {1,05}^{30} = 43.219,42\]</span></p>
+<p>I excel den engelske version, kan man enten skrive ovenstående formler ud, eller benytte fv kommandoen, fv betyder future value. I den danske version skriver man også fv for fremtidsværdi. I første søjle nedenfor står resultaterne, i anden søjle formlen i gåseøjne. Bemærk der er forskel på hvad man separerer argumenter med i forskellige excel-versioner, nogle versioner bruger komma “,” , andre versioner bruger semikolon “;”. Man kan se hvad man skal bruge i den hjælpetekst der kommer op med gult.</p>
+<p>De forskellige argumenter er:</p>
+<p>FV(terminsrenten som decimaltal; antal terminer, ydelsen[^2]; nutidsværdi/pv/present value; type angiver man ikke da den står default korrekt)</p>
+<p>I B2 cellen nedenfor står der derfor:</p>
+<p>=FV(0,05;3;0;-10000)</p>
+<p>Vi har altså 5% terminsrente, 3 terminer, ydelser 0 og -10.000,- i nutidsværdi. Bemærk excel angiver nutidsværdien med negativ værdi, man indsætter jo et beløb i dag, man kan tænke på det som man tager penge op af lommen i dag (derfor minus) og sætter dem ind på sin konto. Resultatet fremtidsværdien, bliver positivt, man angiver jo beløbet, man kan hæve og putte i lommen igen.</p>
+<p><img src="media/image32.png" style="width:5.13925in;height:6.83381in" /></p>
+<p>Vi kan opfatte fremtidsværdien K<sub>n</sub> af en kapital K<sub>0</sub> på et vilkårligt tidspunkt n ude i fremtiden som en funktion af antallet af år/terminer. Dvs. kapitalen er en konstant, (1+r) er en konstant.</p>
+<p>Men potensen n er den variable.</p>
+<p>K<sub>n</sub> =K<sub>0</sub> ⋅ (1+r)<sup>n</sup></p>
+<p>Kaldes fremskrivningsformlen, vi kalder</p>
+<p>K<sub>0</sub> kapitalen/ nutidsværdien/begyndelsesværdien</p>
+<p>K<sub>n</sub> fremtidsværdien</p>
+<p>r renten/vækstraten</p>
+<p>a = 1 + r fremskrivningsfaktoren/grundtallet</p>
+<p>Vi har altså den generelle formel for fremtidsværdien af en kapital.</p>
+<p><span class="math display">\[K_{n} = K_{0}\  \cdot \ \left( 1 + r \right)^{n}\]</span></p>
+<p>Ved at isolere <span class="math inline">\(K_{0}\)</span> får vi formlen for nutidsværdien af en kapital.</p>
+<p><span class="math display">\[K_{0}\  = K_{n}\ \left( 1 + r \right)^{- n}\]</span></p>
+<p>Tilsvarende kan vi isolere antallet af terminer vha. logaritmefunktionen ln.</p>
+<p><span class="math display">\[K_{n} = K_{0}\  \cdot \ \left( 1 + r \right)^{n}\]</span></p>
+<p><span class="math display">\[{\frac{K_{n}}{K_{0}} = \ \left( 1 + r \right)^{n}\ }\]</span></p>
+<p><span class="math display">\[{\ln\left( \frac{K_{n}}{K_{0}} \right) = n \cdot \ln\left( 1 + r \right)}\]</span></p>
+<p><span class="math display">\[{n = \frac{\ln\left( \frac{K_{n}}{K_{0}} \right)}{\ln\left( 1 + r \right)}\ }\]</span></p>
+<p>Vi kan ligeledes isolere renten r.</p>
+<p><span class="math display">\[K_{n} = K_{0}\  \cdot \ \left( 1 + r \right)^{n}\]</span></p>
+<p><span class="math display">\[{\frac{K_{n}}{K_{0}} = \left( 1 + r \right)^{n}}\]</span></p>
+<p><span class="math display">\[{\sqrt[n]{\frac{K_{n}}{K_{0}}} = 1 + r}\]</span></p>
+<p><span class="math display">\[{r = \sqrt[n]{\frac{K_{n}}{K_{0}}} - 1}\]</span></p>
+</div>
+<div id="annuiteter" class="section level2">
+<h2><span class="header-section-number">5.1</span> Annuiteter</h2>
+<br>
+<div class="embed-container">
+<iframe src="https://player.vimeo.com/video/282141038" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen>
+</iframe>
+</div>
+<p><br></p>
+<p>En annuitet er en række lige store betalinger/ydelser betalt ved starten af tidintervaller/terminer, af samme længde, renten er ens og tilskrives efter hver termin.</p>
+</div>
+<div id="fremtidsvrdi-af-en-annuitet" class="section level2">
+<h2><span class="header-section-number">5.2</span> Fremtidsværdi af en annuitet</h2>
+<p><img src="media/image33.png" style="width:6in;height:1.39861in" /></p>
+<p>Hvis man indbetaler ydelsen y på en konto n gange til en fast terminsrente r, vil man kunne hæve <span class="math inline">\(A_{n}\)</span>, på tidspunkt n. Man kalder denne formel opsparingsformlen, fordi man sparer et beløb op det opsparede beløb på tidspunkt n er <span class="math inline">\(A_{n}\)</span>. Dette er illustreret på tidslinjen ovenfor, formlen for fremtidsværdien af annuiteten bliver:</p>
+<p><span class="math display">\[A_{n} = y \cdot \frac{\left( 1 + r \right)^{n} - 1}{r}\]</span></p>
+<p>En person indbetaler hvert halve år 1.000,- på en konto med halvårlig rentetilskrivning <span class="math inline">\(r = \ 0,02\)</span>, der foretages 10 indbetalinger, hvad er saldoen på kontoen efter sidste indbetaling.</p>
+<p><img src="media/image34.png" style="width:6in;height:2.48819in" /></p>
+<p>Her benytter vi i B2 cellen igen FV kommandoen. Bemærk ydelse/pmt argumentet der før var 0 er nu -1000, mens pv/nutidsværdi nu er 0. De -1000 er det beløb personen skal indbetale, i starten af hver termin.</p>
+<p>Man kan komme ud for at man ikke kender en af de andre størrelser r, n eller y, men derimod kender <span class="math inline">\(A_{n}\)</span>. Hvis y eller n er ukendte, kan man udfra ovenstående formel isolere den ukendte størrelse ved reduktionsregnereglerne.</p>
+<p><span class="math display">\[y = A_{n} \cdot \frac{r}{\left( 1 + r \right)^{n} - 1}\]</span></p>
+<p>Excelformlen er PMT (YDELSE dansk version) denne bruger følgende argumenter</p>
+<p>PMT(rate, nper, pv, fv, type), bemærk denne formel kan bruges til at finde ydelsen for både opsparings- og gældsformlen. Opsparingsformlens fv-værdi skal være 0.</p>
+<p>Hvis man skal finde n, kan man isolere n i opsparingsformlen, man får da:</p>
+<p><span class="math display">\[A_{n} = y \cdot \frac{\left( 1 + r \right)^{n} - 1}{r} \Leftrightarrow\]</span></p>
+<p><span class="math display">\[n = \frac{\ln\left( \frac{A_{n} \cdot r}{y} + 1 \right)}{\ln\left( 1 + r \right)}\]</span></p>
+<p>Eller bruge NPER(rate,pmt,pv,fv,type) funktionen i excel, her skal man huske at pv present value skal være 0. Hvis Öztürk ønsker at have $A_{n} =$15.000,- til rådighed, og kan betale terminsydelser på <span class="math inline">\(y = 500, -\)</span> og terminsrenten er r=0,01, hvor mange ydelser skal der da betales.</p>
+<p><img src="media/image35.png" style="width:6in;height:1.24375in" /></p>
+<p>Hvis renten er ukendt kan vi ikke opskrive en entydig formel hvor r isoleres. Vi kan benytte excels RATE(nper,pmt,pv,fv,type,guess) funktion. Hvis Sørensen indsætter 2000 hvert 12 gange, og han lige efter sidste indsættelse har 25340,- på kontoen, har terminsrenten været:</p>
+<p><img src="media/image36.png" style="width:6in;height:1.25694in" /></p>
+</div>
+<div id="nutidsvrdi-af-en-annuitet" class="section level2">
+<h2><span class="header-section-number">5.3</span> Nutidsværdi af en annuitet</h2>
+<p><img src="media/image37.png" style="width:6in;height:1.14931in" /></p>
+<p>Nutidsværdien af en annuitet fortæller os hvad en person kan låne på tidspunkt 0, hvis han i n terminer afdrager samme beløb y, og renten tilskrives terminsvis. Bemærk tidslinjen har tidpunkt 0 med, i modsætning til fremtidsværdien af en annuitet, det er på dette tidspunkt man låner beløbet <span class="math inline">\(A_{0}\)</span>. Man kalder formlen for nutidsværdien af en annuitet gældsformlen fordi, man stifter gæld på tidspunkt 0. Hvorfor starter man ikke ved 1 ligesom i forrige formel, det skyldes at når man ønsker at låne penge nu, låner man ikke penge man betaler tilbage med det samme, dem ville man jo så alligevel ikke have glæde af.</p>
+<p><span class="math display">\[A_{0} = y \cdot \frac{1 - \left( 1 + r \right)^{- n}}{r}\]</span></p>
+<p>Hvis en person kan afdrage y/pmt. kr. 1.000,- på et lån over n=10 terminer, og der på restgælden tilskrives en fast terminsrente r=0,02, ved begyndelsen af hver termin, kan han i alt låne kr. 8.982,50 kr nu. Den første linje i udskriften fra excel, viser hvordan formlen bruges. Den anden linje viser hvorledes den indbyggede excelfunktion beregner nutidsværdien, bemærk PV (present value) er den engelske formel den danske hedder NV (nutidsværdien).</p>
+<p><img src="media/image38.png" style="width:5.65317in;height:2.88909in" /></p>
+<p>Der er en tæt sammenhæng mellem fremtids- og nutidsværdien af en annuitet. Nutidsværdien af annuiteten er fremtidsværdien <span class="math inline">\(A_{n}\)</span> på tidspunkt n tilbagediskonteret til tidspunkt 0.</p>
+<p><span class="math display">\[A_{n} \cdot \left( 1 + r \right)^{- n} = y \cdot \frac{\left( 1 + r \right)^{n} - 1}{r} \cdot \left( 1 + r \right)^{- n} = A_{0}\]</span></p>
+<p>Tilsvarende er <span class="math inline">\(A_{0}\\)</span> fremskrevet til tidspunkt n ved at gange med faktoren <span class="math inline">\(\left( 1 + r \right)^{n}\)</span> det samme som <span class="math inline">\(A_{n}\)</span>.</p>
+<p><span class="math display">\[A_{0} \cdot \left( 1 + r \right)^{n} = y \cdot \frac{1 - \left( 1 + r \right)^{- n}}{r} \cdot \left( 1 + r \right)^{n} = A_{n}\]</span></p>
+<p>Man kan komme ud for at man ikke kender en af de andre størrelser r, n eller y, men derimod kender <span class="math inline">\(A_{0}\)</span>. Hvis y eller n er ukendte, kan man ud fra ovenstående formel isolere den ukendte størrelse ved reduktionsregnereglerne. Er y ukendt får vi:</p>
+<p><span class="math display">\[y = A_{0} \cdot \frac{r}{1 - \left( 1 + r \right)^{- n}}\]</span></p>
+<p>Hvis Jensen gerne vil låne 20.000,- og kender terminsrenten 4%, og skal betale gælden af over 12 terminer, kan man vha. ovenstående formel beregne hans ydelse.</p>
+<p><img src="media/image39.png" style="width:6in;height:2.85903in" /></p>
+<p>Er n antallet af ydelser ukendt kan vi omskrive formlen til</p>
+<p><span class="math display">\[n = - \frac{\ln\left( 1 - \frac{\left( A_{0} \cdot r \right)}{y} \right)}{\ln\left( 1 + r \right)}\ \]</span></p>
+<p>Hansen betaler 1.000,- i ydelse, på et lån på 10.000,- med en terminsrente på 3%, antallet af ydelser n bliver:</p>
+<p><img src="media/image40.png" style="width:6in;height:1.97778in" /></p>
+<p>Hansen skal altså betale 13 ydelser, den sidste ydelse bliver mindre end de første 12.</p>
+<p>Hvis der er ukendt terminsrente r, kan man ikke opstille et eksplicit udtryk for renten, ligningen bliver et polynomium af grad n. Der findes ikke altid en entydig løsning til et polynomium, hvorfor excel og anden software benytter en algoritme til at finde en løsning.</p>
+<p>Hvis Larsen låner 10.000,- der afdrages ved 12 ydelser af 1.500,-, vil vi kunne benytte rate-kommandoen. Vi vil få en terminsrente på 10,45.</p>
+<p><img src="media/image41.png" style="width:6in;height:1.83542in" /></p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="polynomier.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="differentialregning.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

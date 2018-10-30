@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Matematik med økonomisk profil</title>
+  <meta name="description" content="Matematik med økonomisk profil.">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Matematik med økonomisk profil" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Matematik med økonomisk profil." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Matematik med økonomisk profil" />
+  
+  <meta name="twitter:description" content="Matematik med økonomisk profil." />
+  
+
+<meta name="author" content="Thomas Petersen">
+
+
+<meta name="date" content="2018-07-31">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="prev" href="logaritmefunktioner.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="libs/htmlwidgets-1.2/htmlwidgets.js"></script>
+<script src="libs/proj4js-2.3.15/proj4.js"></script>
+<link href="libs/highcharts-5.0.6/css/motion.css" rel="stylesheet" />
+<script src="libs/highcharts-5.0.6/highstock.js"></script>
+<script src="libs/highcharts-5.0.6/highcharts-3d.js"></script>
+<script src="libs/highcharts-5.0.6/highcharts-more.js"></script>
+<script src="libs/highcharts-5.0.6/modules/annotations.js"></script>
+<script src="libs/highcharts-5.0.6/modules/broken-axis.js"></script>
+<script src="libs/highcharts-5.0.6/modules/data.js"></script>
+<script src="libs/highcharts-5.0.6/modules/drilldown.js"></script>
+<script src="libs/highcharts-5.0.6/modules/exporting.js"></script>
+<script src="libs/highcharts-5.0.6/modules/funnel.js"></script>
+<script src="libs/highcharts-5.0.6/modules/heatmap.js"></script>
+<script src="libs/highcharts-5.0.6/modules/map.js"></script>
+<script src="libs/highcharts-5.0.6/modules/no-data-to-display.js"></script>
+<script src="libs/highcharts-5.0.6/modules/offline-exporting.js"></script>
+<script src="libs/highcharts-5.0.6/modules/solid-gauge.js"></script>
+<script src="libs/highcharts-5.0.6/modules/treemap.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/annotations.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/draggable-legend.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/draggable-points.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/export-csv.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/grouped-categories.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/motion.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/pattern-fill-v2.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/tooltip-delay.js"></script>
+<script src="libs/highcharts-5.0.6/custom/reset.js"></script>
+<script src="libs/highcharts-5.0.6/custom/symbols-extra.js"></script>
+<script src="libs/highcharts-5.0.6/custom/text-symbols.js"></script>
+<link href="libs/fontawesome-4.5.0/font-awesome.min.css" rel="stylesheet" />
+<link href="libs/htmlwdgtgrid-1/htmlwdgtgrid.css" rel="stylesheet" />
+<script src="libs/highchart-binding-0.5.0/highchart.js"></script>
+<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="libs/datatables-binding-0.4/datatables.js"></script>
+<link href="libs/dt-core-1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.10.16/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.10.16/js/jquery.dataTables.min.js"></script>
+<link href="libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
+<link href="libs/dygraphs-1.1.1/dygraph.css" rel="stylesheet" />
+<script src="libs/dygraphs-1.1.1/dygraph-combined.js"></script>
+<script src="libs/moment-2.8.4/moment.js"></script>
+<script src="libs/moment-timezone-0.2.5/moment-timezone-with-data.js"></script>
+<script src="libs/moment-fquarter-1.0.0/moment-fquarter.min.js"></script>
+<script src="libs/dygraphs-binding-1.1.1.4/dygraphs.js"></script>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Statistik</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Matematik med økonomisk profil.</a></li>
+<li class="chapter" data-level="1" data-path="indledning.html"><a href="indledning.html"><i class="fa fa-check"></i><b>1</b> Indledning</a></li>
+<li class="chapter" data-level="2" data-path="excel-simpel-brug.html"><a href="excel-simpel-brug.html"><i class="fa fa-check"></i><b>2</b> Excel simpel brug</a><ul>
+<li class="chapter" data-level="2.1" data-path="excel-simpel-brug.html"><a href="excel-simpel-brug.html#video-excel-for-begyndere."><i class="fa fa-check"></i><b>2.1</b> Video Excel for begyndere.</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="procentregneregler.html"><a href="procentregneregler.html"><i class="fa fa-check"></i><b>3</b> Procentregneregler</a><ul>
+<li class="chapter" data-level="3.1" data-path="procentregneregler.html"><a href="procentregneregler.html#video-procentregning"><i class="fa fa-check"></i><b>3.1</b> Video procentregning</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="indekstal.html"><a href="indekstal.html"><i class="fa fa-check"></i><b>4</b> Indekstal</a><ul>
+<li class="chapter" data-level="4.0.1" data-path="indekstal.html"><a href="indekstal.html#danske-bank-og-jyske-bank"><i class="fa fa-check"></i><b>4.0.1</b> Danske Bank og Jyske Bank</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="procentpoint.html"><a href="procentpoint.html"><i class="fa fa-check"></i><b>5</b> Procentpoint</a></li>
+<li class="chapter" data-level="6" data-path="reduktionsregneregler.html"><a href="reduktionsregneregler.html"><i class="fa fa-check"></i><b>6</b> Reduktionsregneregler</a><ul>
+<li class="chapter" data-level="6.1" data-path="reduktionsregneregler.html"><a href="reduktionsregneregler.html#video-regnearternes-hieraki."><i class="fa fa-check"></i><b>6.1</b> Video regnearternes hieraki.</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="brkregneregler.html"><a href="brkregneregler.html"><i class="fa fa-check"></i><b>7</b> Brøkregneregler</a><ul>
+<li class="chapter" data-level="7.1" data-path="brkregneregler.html"><a href="brkregneregler.html#video-brkregneregler"><i class="fa fa-check"></i><b>7.1</b> Video Brøkregneregler</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="potensregneregler.html"><a href="potensregneregler.html"><i class="fa fa-check"></i><b>8</b> Potensregneregler</a><ul>
+<li class="chapter" data-level="8.1" data-path="potensregneregler.html"><a href="potensregneregler.html#video-potensregneregler"><i class="fa fa-check"></i><b>8.1</b> Video potensregneregler</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="linere-funktioner.html"><a href="linere-funktioner.html"><i class="fa fa-check"></i><b>9</b> Lineære funktioner</a><ul>
+<li class="chapter" data-level="9.1" data-path="linere-funktioner.html"><a href="linere-funktioner.html#video-funktioner"><i class="fa fa-check"></i><b>9.1</b> Video funktioner</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="linere-funktioner.html"><a href="linere-funktioner.html#generel-forskift"><i class="fa fa-check"></i><b>9.1.1</b> Generel Forskift</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="linere-funktioner.html"><a href="linere-funktioner.html#bestemmelse-af-forskrift-baseret-pa-2-punkter"><i class="fa fa-check"></i><b>9.2</b> Bestemmelse af forskrift baseret på 2 punkter</a></li>
+<li class="chapter" data-level="9.3" data-path="linere-funktioner.html"><a href="linere-funktioner.html#lsning-af-ligninger"><i class="fa fa-check"></i><b>9.3</b> Løsning af ligninger</a></li>
+<li class="chapter" data-level="9.4" data-path="linere-funktioner.html"><a href="linere-funktioner.html#ligninger-med-2-ubekendte."><i class="fa fa-check"></i><b>9.4</b> 2 ligninger med 2 ubekendte.</a><ul>
+<li class="chapter" data-level="9.4.1" data-path="linere-funktioner.html"><a href="linere-funktioner.html#video-2-ligninger-med-2-ubekendte."><i class="fa fa-check"></i><b>9.4.1</b> Video 2 ligninger med 2 ubekendte.</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="linere-funktioner.html"><a href="linere-funktioner.html#udbuds--og-eftersprgselskurver"><i class="fa fa-check"></i><b>9.5</b> Udbuds- og efterspørgselskurver</a></li>
+<li class="chapter" data-level="9.6" data-path="linere-funktioner.html"><a href="linere-funktioner.html#addition-af-linere-funktioner"><i class="fa fa-check"></i><b>9.6</b> Addition af lineære funktioner</a><ul>
+<li class="chapter" data-level="9.6.1" data-path="linere-funktioner.html"><a href="linere-funktioner.html#vertikal-addition-af-linere-funktioner"><i class="fa fa-check"></i><b>9.6.1</b> Vertikal addition af lineære funktioner</a></li>
+<li class="chapter" data-level="9.6.2" data-path="linere-funktioner.html"><a href="linere-funktioner.html#horisontal-addition-af-linere-funktioner"><i class="fa fa-check"></i><b>9.6.2</b> Horisontal addition af lineære funktioner</a></li>
+</ul></li>
+<li class="chapter" data-level="9.7" data-path="linere-funktioner.html"><a href="linere-funktioner.html#priselasticitet"><i class="fa fa-check"></i><b>9.7</b> Priselasticitet</a><ul>
+<li class="chapter" data-level="9.7.1" data-path="linere-funktioner.html"><a href="linere-funktioner.html#video-om-priselasticitet"><i class="fa fa-check"></i><b>9.7.1</b> Video om priselasticitet</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="polynomier.html"><a href="polynomier.html"><i class="fa fa-check"></i><b>10</b> Polynomier</a><ul>
+<li class="chapter" data-level="10.1" data-path="polynomier.html"><a href="polynomier.html#gradspolynomier"><i class="fa fa-check"></i><b>10.1</b> 2. Gradspolynomier</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="polynomier.html"><a href="polynomier.html#video-2.-gradspolynomier"><i class="fa fa-check"></i><b>10.1.1</b> Video 2. Gradspolynomier</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="eksponentielle-funktioner.html"><a href="eksponentielle-funktioner.html"><i class="fa fa-check"></i><b>11</b> Eksponentielle funktioner</a><ul>
+<li class="chapter" data-level="11.0.1" data-path="eksponentielle-funktioner.html"><a href="eksponentielle-funktioner.html#section"><i class="fa fa-check"></i><b>11.0.1</b> </a></li>
+<li class="chapter" data-level="11.1" data-path="eksponentielle-funktioner.html"><a href="eksponentielle-funktioner.html#fordoblings--og-halveringskonstant."><i class="fa fa-check"></i><b>11.1</b> Fordoblings- og halveringskonstant.</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="finansiel-regning.html"><a href="finansiel-regning.html"><i class="fa fa-check"></i><b>12</b> Finansiel regning</a><ul>
+<li class="chapter" data-level="12.0.1" data-path="finansiel-regning.html"><a href="finansiel-regning.html#nutidsvrdi-og-fremtidsvrdi-af-en-kapital"><i class="fa fa-check"></i><b>12.0.1</b> Nutidsværdi og fremtidsværdi af en kapital</a></li>
+<li class="chapter" data-level="12.1" data-path="finansiel-regning.html"><a href="finansiel-regning.html#annuiteter"><i class="fa fa-check"></i><b>12.1</b> Annuiteter</a><ul>
+<li class="chapter" data-level="12.1.1" data-path="finansiel-regning.html"><a href="finansiel-regning.html#fremtidsvrdi-af-en-annuitet"><i class="fa fa-check"></i><b>12.1.1</b> Fremtidsværdi af en annuitet</a></li>
+<li class="chapter" data-level="12.1.2" data-path="finansiel-regning.html"><a href="finansiel-regning.html#nutidsvrdi-af-en-annuitet"><i class="fa fa-check"></i><b>12.1.2</b> Nutidsværdi af en annuitet</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="differentialregning.html"><a href="differentialregning.html"><i class="fa fa-check"></i><b>13</b> Differentialregning</a><ul>
+<li class="chapter" data-level="13.1" data-path="differentialregning.html"><a href="differentialregning.html#regneregler-differentiation"><i class="fa fa-check"></i><b>13.1</b> Regneregler differentiation</a></li>
+<li class="chapter" data-level="13.2" data-path="differentialregning.html"><a href="differentialregning.html#differentiation-af-sammensatte-funktioner."><i class="fa fa-check"></i><b>13.2</b> Differentiation af sammensatte funktioner.</a></li>
+<li class="chapter" data-level="13.3" data-path="differentialregning.html"><a href="differentialregning.html#ekstremumspunkter"><i class="fa fa-check"></i><b>13.3</b> Ekstremumspunkter</a></li>
+<li class="chapter" data-level="13.4" data-path="differentialregning.html"><a href="differentialregning.html#lokale-og-globale-ekstremumspunkter"><i class="fa fa-check"></i><b>13.4</b> Lokale og globale ekstremumspunkter</a></li>
+<li class="chapter" data-level="13.5" data-path="differentialregning.html"><a href="differentialregning.html#konveksitet-og-konkavitet"><i class="fa fa-check"></i><b>13.5</b> Konveksitet og konkavitet</a></li>
+<li class="chapter" data-level="13.6" data-path="differentialregning.html"><a href="differentialregning.html#sammenhnge-avc-atc-tc-tr-mc-mr-og-mathbfpi"><i class="fa fa-check"></i><b>13.6</b> Sammenhænge AVC, ATC, TC, TR, MC, MR og <span class="math inline">\(\mathbf{\pi}\)</span></a></li>
+<li class="chapter" data-level="13.7" data-path="differentialregning.html"><a href="differentialregning.html#optimeringseksempel"><i class="fa fa-check"></i><b>13.7</b> Optimeringseksempel</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="integralregning.html"><a href="integralregning.html"><i class="fa fa-check"></i><b>14</b> Integralregning</a><ul>
+<li class="chapter" data-level="14.1" data-path="integralregning.html"><a href="integralregning.html#partiel-integration"><i class="fa fa-check"></i><b>14.1</b> Partiel integration</a></li>
+<li class="chapter" data-level="14.2" data-path="integralregning.html"><a href="integralregning.html#arealberegning"><i class="fa fa-check"></i><b>14.2</b> Arealberegning</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="excel-investering.html"><a href="excel-investering.html"><i class="fa fa-check"></i><b>15</b> Excel Investering</a><ul>
+<li class="chapter" data-level="15.0.1" data-path="excel-investering.html"><a href="excel-investering.html#video-om-investering-med-excel"><i class="fa fa-check"></i><b>15.0.1</b> Video om investering med excel</a></li>
+<li class="chapter" data-level="15.1" data-path="excel-investering.html"><a href="excel-investering.html#investeringer-med-ikke-periodiske-varierende-betalingsstrmme-i-excel"><i class="fa fa-check"></i><b>15.1</b> Investeringer med ikke-periodiske varierende betalingsstrømme i excel</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="excel-malsgning.html"><a href="excel-malsgning.html"><i class="fa fa-check"></i><b>16</b> Excel målsøgning</a></li>
+<li class="chapter" data-level="17" data-path="excel-liner-programmering.html"><a href="excel-liner-programmering.html"><i class="fa fa-check"></i><b>17</b> Excel lineær programmering</a></li>
+<li class="chapter" data-level="18" data-path="excel-liner-regression.html"><a href="excel-liner-regression.html"><i class="fa fa-check"></i><b>18</b> Excel Lineær regression</a><ul>
+<li class="chapter" data-level="18.0.1" data-path="excel-liner-regression.html"><a href="excel-liner-regression.html#video-excel-liner-regression"><i class="fa fa-check"></i><b>18.0.1</b> Video excel lineær regression</a></li>
+<li class="chapter" data-level="18.0.2" data-path="excel-liner-regression.html"><a href="excel-liner-regression.html#video-jmp-regressionseksempel"><i class="fa fa-check"></i><b>18.0.2</b> Video JMP regressionseksempel</a></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="lsning-af-ligningssystemer-med-excel.html"><a href="lsning-af-ligningssystemer-med-excel.html"><i class="fa fa-check"></i><b>19</b> Løsning af ligningssystemer med excel</a></li>
+<li class="chapter" data-level="20" data-path="excel-omkostnings-eksempel.html"><a href="excel-omkostnings-eksempel.html"><i class="fa fa-check"></i><b>20</b> Excel omkostnings-eksempel</a></li>
+<li class="chapter" data-level="21" data-path="excel-oversttelser.html"><a href="excel-oversttelser.html"><i class="fa fa-check"></i><b>21</b> Excel oversættelser</a></li>
+<li class="chapter" data-level="22" data-path="inverse-funktioner.html"><a href="inverse-funktioner.html"><i class="fa fa-check"></i><b>22</b> Inverse funktioner</a></li>
+<li class="chapter" data-level="23" data-path="logaritmefunktioner.html"><a href="logaritmefunktioner.html"><i class="fa fa-check"></i><b>23</b> Logaritmefunktioner</a></li>
+<li class="chapter" data-level="24" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html"><i class="fa fa-check"></i><b>24</b> Partielle afledede og gradienten</a><ul>
+<li class="chapter" data-level="24.0.1" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#video-om-partielle-afledede-og-gradienten"><i class="fa fa-check"></i><b>24.0.1</b> Video om partielle afledede og gradienten</a></li>
+<li class="chapter" data-level="24.1" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#cobb-douglas-funktioner"><i class="fa fa-check"></i><b>24.1</b> Cobb-Douglas funktioner</a><ul>
+<li class="chapter" data-level="24.1.1" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#video-produktionsfunktioner"><i class="fa fa-check"></i><b>24.1.1</b> Video produktionsfunktioner</a></li>
+</ul></li>
+<li class="chapter" data-level="24.2" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#isoquantisokvant-kurver"><i class="fa fa-check"></i><b>24.2</b> Isoquant/isokvant kurver</a></li>
+<li class="chapter" data-level="24.3" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#isocostisokost-kurver"><i class="fa fa-check"></i><b>24.3</b> Isocost/Isokost kurver</a><ul>
+<li class="chapter" data-level="24.3.1" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#video-isocost-kurver"><i class="fa fa-check"></i><b>24.3.1</b> Video isocost kurver</a></li>
+<li class="chapter" data-level="24.3.2" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#section-1"><i class="fa fa-check"></i><b>24.3.2</b> </a></li>
+<li class="chapter" data-level="24.3.3" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#eksempel-pa-optimering-af-produktionsoutput-for-fast-omkostningsniveau"><i class="fa fa-check"></i><b>24.3.3</b> Eksempel på optimering af produktionsoutput for fast omkostningsniveau</a></li>
+<li class="chapter" data-level="24.3.4" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#video-optimering-af-produktionsoutput-for-fast-omkostningsniveau"><i class="fa fa-check"></i><b>24.3.4</b> Video optimering af produktionsoutput for fast omkostningsniveau</a></li>
+<li class="chapter" data-level="24.3.5" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#eksempel-pa-optimering-af-omkostningsniveauet-for-fast-produktionsniveau"><i class="fa fa-check"></i><b>24.3.5</b> Eksempel på optimering af omkostningsniveauet for fast produktionsniveau</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://tepedu.com" target="blank">Thomas Petersen</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Matematik med økonomisk profil</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="partielle-afledede-og-gradienten" class="section level1">
+<h1><span class="header-section-number">Kapitel 24</span> Partielle afledede og gradienten</h1>
+<div id="video-om-partielle-afledede-og-gradienten" class="section level3">
+<h3><span class="header-section-number">24.0.1</span> Video om partielle afledede og gradienten</h3>
+<p><img src="media/image62.png" style="width:6in;height:3.75in" /></p>
+<p>Hvis vi har en funktion af 2 variable <span class="math inline">\(f\left( x,y \right) = - x^{2} - xy - y^{2} + 3\)</span>, har vi svært ved at tegne den i planen. Man kan skitsere grafen i rummet med 3d software, som f.eks. i billedet nedenfor. Normalt beskriver man funktionsværdien med z, i stedet for y som for funktioner af en variabel. På billedet vises x- og y-aksens retninger ved de 2 sorte pilespidser til hhv. venstre og mod læseren, mens pilen op viser z-aksens retning. Der er udover <span class="math inline">\(f(x,y)\)</span>, altså den grønne bjergform, et snit i y-aksen med forskriften y=-1. Hvis man vælger et punkt på grafen (altså bjergformen), kan man godt indse at man ikke i dette punkt, kan bestemme en tangent. Det svarer til hvis tangenten var en tændstik, på f.eks. en bold, man kan i et punkt på bolden vende tændstikken i mange retninger, derfor kan man ikke bestemme en tangent. Hvis man derimod skærer en plade lodret ned igennem bjerget hvor y=-1, danner snittet en kurve (bjerget er hult). På alle punkter i snittet er <span class="math inline">\(y = - 1\)</span>, vi vælger nu x=1. Da vi kender forskriften for <span class="math inline">\(f\left( x,y \right)\)</span>, kan vi bestemme z som <span class="math inline">\(f\left( 1, - 1 \right) = - 1^{2} - 1 \cdot - 1 - \left( - 1 \right)^{2} = 2\)</span>. Det blå punkt på tegningen nedenfor er netop <span class="math inline">\((1, - 1,2)\)</span>.</p>
+<p>Man differentierer partielt mht. til f.eks. x og betragter y som en konstant, man skriver den partielle afledede mht. x som <span class="math inline">\(f_{x}\left( x,y \right)\)</span>. Når vi differentierer funktionen af flere variable mht. til x betragter vi de øvrige variable som konstanter. Derfor bliver de partielle afledede.</p>
+<p><span class="math display">\[f_{x}\left( x,y \right) = - 2x - y\]</span></p>
+<p>Bemærk <span class="math inline">\(-y^{2} + 3\)</span> leddene forsvinder, de er jo konstanter.</p>
+<p>Tilsvarende:</p>
+<p><span class="math display">\[f_{y}\left( x,y \right) = - x - 2y\]</span></p>
+<p>Vi finder nu hældningen for tangenten der ligger i planen <span class="math inline">\(y = - 1\)</span>, der gennemskærer bjerget og har røringspunkt i (1,-1,2) det blå punkt som</p>
+<p><span class="math display">\[f_{x}\left( 1, - 1 \right) = - 2 \cdot 1 - - 1 = - 1\]</span></p>
+<p>Det betyder at når x vokser med 1 fra dette punkt aftager z-værdien (funktionsværdien) med 1, det lyder jo intuitivt fornuftigt eftersom bjerget har top <span class="math inline">\(z = 3\\)</span> når <span class="math inline">\(x = 0,\ y = 0\)</span>. Når x-koordinaten er 1 vil z-værdien aftage når x-værdien vokser.</p>
+<p><img src="media/image63.png" style="width:6in;height:4.91806in" /></p>
+<p>Man kunne lave en tilsvarende tegning hvor man satte en plan gennem <span class="math inline">\(x = 1\\)</span>dvs holdt x konstant og fandt den tilsvarende hældning for y i det blå punkt. Denne hældning kan vi udregne vha. den partielle afledede mht. y.</p>
+<p><span class="math display">\[f_{y}\left( x,y \right) = - 1 - 2 \cdot - 1 = 1\]</span></p>
+<p>Her har vi en positiv tangenthældning, det skyldes at y koordinaten i punktet er <span class="math inline">\(- 1\)</span>, når y vokser fra dette punkt vil den nærme sig <span class="math inline">\(\left( 0,0,0 \right)\)</span> det eneste globale maksimum for kurven. På tegningen nedenfor er figuren drejet og tangenten for y fast lig -1 er tegnet ind det er den blå linie der ligger i den grå skæring <span class="math inline">\(y = - 1\)</span>. Bemærk nu er det x-aksen der peger mod læseren, og y-aksen mod højre. Man kan godt fornemme at når vi lægger et snit i keglen, får vi en gammeldags 2-dimensional parabel vi så finder tangent for i punktet <span class="math inline">\((1, - 1,2)\)</span>.</p>
+<p><img src="media/image64.png" style="width:6in;height:5.12847in" /></p>
+<p>På den næste tegning er tangenten for x fast lig 1 i punktet <span class="math inline">\(\left( 1, - 1,2 \right)\)</span> den røde linje lagt ind i den orange-røde skæring er lagt hvor x er lig med 1. Bemærk den blå tangent har negativ hældning -1 når x vokser og den røde tangent har hældning 1 når y vokser. Bemærk nu peger x-aksen mest mod læseren.</p>
+<p><img src="media/image65.png" style="width:6in;height:5.42083in" /></p>
+<p>Vi definerer nu gradienten</p>
+<p><span class="math display">\[\nabla f(x,y) = \left\langle - 2x - y, - x - 2y \right\rangle\]</span></p>
+<p>Denne består altså af de partielle aflede mht. x og y. Gradienten for et punkt angiver i hvilken retning den største tilvækst er. For vort blå punkt får man altså ved indsættelse.</p>
+<p><span class="math display">\[\nabla f(1, - 1) = \left\langle - 2,1 \right\rangle\]</span></p>
+<p>Hvis det var en bjergbestiger der stod i blå punkt på bjerget og ville hurtigst op til toppen, skal han altså bevæge 2 enheder tilbage ad x-aksen og 1 enhed frem ad y-aksen. Husk på at pilen ud mod læseren er x-aksen, så han går 2 enheder væk fra læseren og 1 endheder til højre. Det betyder også at hvis bjergbestigeren har fået iltmangel og skal skynde sig ned af bjerget, er retningen med hurtigst nedstigning den modsatte retning <span class="math inline">\(\left\langle 2, - 1 \right\rangle\)</span>.</p>
+<p>Vi kender retningen i hvilken bjergbestigeren skal klatre, vi kan nu beregne hvor meget hældningen vil være når han bevæger sig en enhed i den optimale retning, der vil bringe ham hurtigst til toppen af bjerget. Det gøres ved at finde længden af vektoren <span class="math inline">\(\left\langle - 2,1 \right\rangle\)</span>.</p>
+<p><span class="math display">\[\left\| \nabla f(1, - 1) \right\| = \sqrt{\left( - 2 \right)^{2} + 1^{2}} = \sqrt{5} \approx 2.24\]</span></p>
+<p>Nedenfor er bjerget tegnet set oppefra, den store blå kugle er punktet <span class="math inline">\((1, - 1,2)\)</span>, x-aksen er mod højre her og y-aksen er opad. Z-aksen bjergtoppen er ud mod læseren. Den blå streg angiver gradient-vektoren <span class="math inline">\(\left\langle - 2,1 \right\rangle\)</span>. Bjergbestigeren går altså -2 i x-aksens retning (mod venstre det er jo minus) og 1 op i y-aksens retning.</p>
+<p>Bemærk at når man indsætter punktet <span class="math inline">\(\left( 0,0,3 \right)\)</span> i gradienten får man <span class="math inline">\(\nabla f(0,0) = \left\langle 0,0 \right\rangle\)</span></p>
+<p>Man er da på toppen af bjerget og skal ikke flytte sig for at forøge funktionsværdien.</p>
+<p><img src="media/image66.png" style="width:6in;height:4.53194in" /></p>
+<p>Indenfor økonomi bruger man partiel differentiation f.eks. til at maximere profitfunktioner af 2 eller flere variable. I vores eksempel kunne vi have fundet ekstremumspunkter ved at differentiere partielt og sætte lig nul, og herefter løse ligningerne ved f.eks. substitutionsmetoden.</p>
+<p><span class="math display">\[{- 2x - y = 0}{- x - 2y = 0}\]</span></p>
+<p>Af første ligning får vi:</p>
+<p><span class="math display">\[y = - 2x\]</span></p>
+<p>Ved indsættelse i anden ligning får vi:</p>
+<p><span class="math display">\[{- x - 2 \cdot - 2x = 0 \Leftrightarrow }{x = 0}\]</span></p>
+<p>Og derefter:</p>
+<p><span class="math display">\[y = 0\]</span></p>
+</div>
+<div id="cobb-douglas-funktioner" class="section level2">
+<h2><span class="header-section-number">24.1</span> Cobb-Douglas funktioner</h2>
+<div id="video-produktionsfunktioner" class="section level3">
+<h3><span class="header-section-number">24.1.1</span> Video produktionsfunktioner</h3>
+<p><img src="media/image67.png" style="width:6in;height:3.75in" /></p>
+<p>Cobb-Douglas funktioner benyttes til at beskrive, nytte- og produktionsfunktioner af 2 eller flere variable.</p>
+<p>Den generelle form for Cobb-Douglas produktionsfunktioner er:</p>
+<p><span class="math display">\[Q = AK^{a}L^{b}\]</span></p>
+<p>Hvor Q angiver produktionen ved kapitalanvendelsen K og arbejdskraftsanvendelsen L. A, a og b er konstanter. I dette tilfælde er det altså en funktion af 2 variable ligesom vi så funktioner i 2 variable i forrige kapitel. Vi kan skitsere disse vha. 3D software. Hvis en eksponenterne a og b summer til 1 dvs. <span class="math inline">\(a + b = 1\)</span> er der tale om en homogen funktion af første orden. For sådanne funktioner gælder at for en vilkårlig konstant h:</p>
+<p><span class="math display">\[h \cdot f\left( x,y \right) = f(h \cdot x,h \cdot y)\]</span></p>
+<p>og tilsvarende for mere end 2 variable. Man siger indenfor økonomien at funktionen har konstant skalaafkast. Er <span class="math inline">\(a + b &lt; 1\)</span> har funktionen aftagende skalaafkast. Er <span class="math inline">\(a + b &gt; 1\)</span> har funktionen voksende skalaafkast. I tegningen nedenfor er indtegnet:</p>
+<ul>
+<li><p>en rød aftagende skalaafkast funktion <span class="math inline">\(f\left( x,y \right) = 2 \cdot x^{0,25} \cdot y^{0,25}\)</span> med økonomisk notation <span class="math inline">\(Q\left( L,K \right) = 2 \cdot L^{0,25} \cdot K^{0,25}\)</span>.</p></li>
+<li><p>En grå konstant skalaafkast funktion <span class="math inline">\(f\left( x,y \right) = 2 \cdot x^{0,5} \cdot y^{0,5}\)</span> med økonomisk notation <span class="math inline">\(Q\left( L,K \right) = 2 \cdot L^{0,5} \cdot K^{0,5}\)</span>.</p></li>
+<li><p>en grøn voksende skalaafkast funktion <span class="math inline">\(f\left( x,y \right) = 2 \cdot x^{0,75} \cdot y^{0,75}\)</span> med økonomisk notation <span class="math inline">\(Q\left( L,K \right) = 2 \cdot L^{0,75} \cdot K^{0,75}\)</span>. Den grønne funktion er den der forsvinder ud af billedet.</p></li>
+</ul>
+<blockquote>
+<p>Man har x-aksen (L altså arbejdskraft), ud mod læseren y-aksen (K kapital) til højre. Output altså produktionen er angivet op af z-aksen. Man kan godt se at tegningen at når man øger forbruget af L og K vil man få et højere output på den grønne afbildning fremfor hhv. den grå og røde.</p>
+</blockquote>
+<p><img src="media/image68.png" style="width:5.68095in;height:7.90333in" /></p>
+</div>
+</div>
+<div id="isoquantisokvant-kurver" class="section level2">
+<h2><span class="header-section-number">24.2</span> Isoquant/isokvant kurver</h2>
+<p>Vi betragter nu funktionen</p>
+<p><span class="math display">\[Q = 2K^{0,5} \cdot L^{0,5}\]</span></p>
+<p>Vi kan tegne funktionen, aksen mod læseren er x-aksen K Kapital, y-aksen der løber mød højre er L arbejdskraft og z-aksen er produktionsoutput. Der er lagt en plan med et fast niveau <span class="math inline">\(z = 1\\)</span>ind i tegningen, skæringen mellem produktionskurven og planen danne isokvant kurven hvor output er 1 i planen</p>
+<p><span class="math display">\[\ \]</span></p>
+<p><img src="media/image69.png" style="width:6in;height:4.68403in" /></p>
+<p>Isokvant-funktion er indtegnet nedenfor, den er fundet ved:</p>
+<p><span class="math display">\[Q = 2K^{0,5} \cdot L^{0,5}\]</span></p>
+<p><span class="math display">\[{1 = 2K^{0,5} \cdot L^{0,5}\ }\]</span></p>
+<p><span class="math display">\[{\frac{1}{L^{0,5}} = 2K^{0,5}}\]</span></p>
+<p><span class="math display">\[{\frac{1}{2 \cdot L^{0,5}} = K^{0,5}}\]</span></p>
+<p><span class="math display">\[\frac{1}{2 \cdot L^{0,5}} = K^{0,5}\]</span></p>
+<p><span class="math display">\[{K = \left( \frac{1}{2 \cdot L^{0,5}} \right)^{2}}\]</span></p>
+<p><span class="math display">\[{K = \frac{1}{\left( 2 \cdot L^{0,5} \right)^{2}}}{K = \frac{1}{4L}}\]</span></p>
+<p>$$$$
+<img src="media/image70.png" style="width:6in;height:4.68403in" /></p>
+<p>Når man skal finde tangenthældninger til en isokvant kurve skal man bruge normal differentiation for en funktion af en variabel, for nu er vi har vi jo låst z til en fast størrelse. Man skal altså ikke finde partielle afledede til isokvant funktionen, som vi kan opfatte som en funktion af en variabel nemlig L.</p>
+<p>Vi får derfor for ovennævnte eksempel følgende afledede:</p>
+<p><span class="math display">\[\left( \frac{1}{4L} \right)^{&#39;} = \left( \frac{1}{4}L^{- 1} \right)^{&#39;} = - 1 \cdot \frac{1}{4}L^{- 1 - 1} = - \frac{1}{4}L^{- 2} = - \frac{1}{4 \cdot L^{2}}\]</span></p>
+<p>Den aflede angiver altså tangenthældninger i forskellige punkter <span class="math inline">\((L,K)\)</span> på isokvant kurven. Hvis vi f.eks. vælger punktet <span class="math inline">\((0.5,f\left( 0.5 \right) = \left( 0.5,\frac{1}{4 \cdot 0,5}\  \right) = (0.5,0.5)\)</span></p>
+<p>Får vi tangenthældningen i dette punkt som <span class="math inline">\(- \frac{1}{4 \cdot L^{2}} = = - \frac{1}{4 \cdot {0.5}^{2}} = - \frac{1}{4 \cdot \frac{1}{4}} = - \frac{1}{1} = - 1\)</span></p>
+<p>Denne tangent er indtegnet nedenfor.</p>
+<p><img src="media/image71.png" style="width:6in;height:3.65132in" /></p>
+</div>
+<div id="isocostisokost-kurver" class="section level2">
+<h2><span class="header-section-number">24.3</span> Isocost/Isokost kurver</h2>
+<div id="video-isocost-kurver" class="section level3">
+<h3><span class="header-section-number">24.3.1</span> Video isocost kurver</h3>
+<p><img src="media/image72.png" style="width:6in;height:3.75in" /></p>
+<p>En omkostningsfunktion kan være givet på formen:</p>
+<p><span class="math display">\[C = wL + rK\]</span></p>
+<p>Hvor w og r er konstanter. Når vi ikke betragter et bestemt omkostningsniveau C, er der tale om en funktion af to variable hvor funktionsværdien er givet ved C.</p>
+<p><span class="math display">\[C\left( L,K \right) = wL + rK\]</span></p>
+<p>Eller med matematisk notation:</p>
+<p><span class="math display">\[z = f\left( x,y \right) = wx + ry\]</span></p>
+<p>Hvis vi f.eks. har givet</p>
+<p><span class="math display">\[C = 0.5L + 1K\]</span></p>
+<p>Vil funktionen give en plan i rummet, dette er tegnet nedenfor. x-aksen L ud mod læseren, y-aksen til højre. Hvis man opfatter x-y planen hvor <span class="math inline">\(z = 0\ ,\)</span> som gulvet ligger den røde kugle på gulvet, den ligger i punktet (2,1,0). Den blå kugle svæver lodret over den røde kugle i punktet <span class="math inline">\((2,1,2)\)</span>. Den blå kugle ligger præcis i planen i rummet, dannet af omkostningsfunktionen. Det kan man se af at.</p>
+<p><span class="math display">\[C = 0.5 \cdot 2 + 1 \cdot 1 = 2\]</span></p>
+<p><img src="media/image73.png" style="width:6in;height:4.83819in" /></p>
+<p>Når man danner isokost linjer fastholder man et bestemt omkostningsniveau for C. Nedenfor er en funktion <span class="math inline">\(C = 1\)</span> indtegnet i rummet. Det giver den grå flade, bemærk den svæver som et bord uden ben, mellem den røde bold på gulvet (C=0) og den blå bold. Isokost linjen, ligger der hvor den grå flade skærer den grønne flade, forskriften for isokostlinjen bliver</p>
+<p><span class="math display">\[1 = 0,5L + K\]</span></p>
+<p>Omskrevet får vi</p>
+<p><span class="math display">\[K = - 0,5L + 1\]</span></p>
+<p><img src="media/image74.png" style="width:6in;height:3.73403in" /></p>
+<p>I planen ser isokost kurven ud som nedenfor, man kan forestille sig man kigger på skæringen i rummet mellem fladerne præcis ovenfra.</p>
+<p><img src="media/image75.png" style="width:6in;height:3.65132in" /></p>
+</div>
+<div id="section-1" class="section level3">
+<h3><span class="header-section-number">24.3.2</span> </h3>
+</div>
+<div id="eksempel-pa-optimering-af-produktionsoutput-for-fast-omkostningsniveau" class="section level3">
+<h3><span class="header-section-number">24.3.3</span> Eksempel på optimering af produktionsoutput for fast omkostningsniveau</h3>
+</div>
+<div id="video-optimering-af-produktionsoutput-for-fast-omkostningsniveau" class="section level3">
+<h3><span class="header-section-number">24.3.4</span> Video optimering af produktionsoutput for fast omkostningsniveau</h3>
+<p><img src="media/image76.png" style="width:6in;height:3.75in" /></p>
+<p>Hvis vi har et fast omkostningsniveau dvs. en fast isokost kurve, skal vi forsøge at tilpasse isokvant kurverne således at output optimeres. Vores problem kan beskrives som.</p>
+<p><span class="math display">\[{Max\ Q = 2K^{0,5} \cdot L^{0,5}}{\text{u.b.}}{1 = 1K + 0,5L}\]</span></p>
+<p>Vi tegner forskellige isokvant linjer ind for at forsøge at matche vores isokost linje. Vi er ved et lykketræf heldige den grønne isokvant linje har røringspunkt i (1,0.5) med isokost linjen.</p>
+<p><img src="media/image77.png" style="width:6in;height:3.65132in" /></p>
+<p>Vi var heldige hurtigt at ramme den rigtige isokost kurve, så vi kan bestemme den optimale sammensætning af <span class="math inline">\(L\ og\ K\ (L = 1,\ K = 0.5)\)</span> for et forudbestemt omkostningsniveau. Ved indsættelse i produktionsfunktionen får vi:</p>
+<p><span class="math display">\[Q = 2 \cdot 1^{0,5} \cdot {0,5}^{0,5} = 2 \cdot {0,5}^{0,5} = \sqrt{2} \approx 1,4142\]</span></p>
+<p>Vi kender hældningen på isokost-kurven her <span class="math inline">\(- 0,5\)</span>, den absolutte værdi 0,5 kaldes i økonomien for MRTS (marginal rate og technical substitution)</p>
+<p>Vi har tidligere beregnet den afledede til omkostningsfunktionen Q, for en fast værdi af Q=1.</p>
+<p><span class="math display">\[K&#39; = - \frac{1}{4L^{2}}\]</span></p>
+<p>Vi fandt produktionsniveauet Q=2 (værdien i tælleren), når vi indsætter L=1 som jo var den optimale arbejdsmængde får vi</p>
+<p><span class="math display">\[K^{&#39;} = - \frac{2}{4{\cdot 1}^{2}} = - \frac{1}{2}\]</span></p>
+<p>Heraf ser man at hældningen på isokvant kurven i punktet <span class="math inline">\(\left( L,K \right) = (1,0.5)\)</span>, svarer til hældningen af isokostkurven.</p>
+<p>Det er problematisk at løse problemet eksplicit algebraisk, fordi vi får 2 ligninger med 3 ubekendte (L,K,Q), problemet er.</p>
+<p><span class="math display">\[{Max\ Q = 2K^{0,5} \cdot L^{0,5}}{\text{u.b.}}{1 = 1K + 0,5L}\]</span></p>
+<p>Vi kan løse dette problem hurtigt i solver, den kan håndtere ikke lineære objektfunktioner og bibetingelser. Nedenfor er et billede med løsningen samt Solver promten.</p>
+<p><img src="media/image78.png" style="width:6in;height:3.59375in" /></p>
+<p>Vi kan se at solver har fundet samme optimale løsning som vi fandt grafisk, bemærk solver metoden står til GRG Nonlinear, fordi vi har en ikke lineær objektfunktion. Man kan hente excelfilen ved at klikke på vinduet.</p>
+<p>Vi kunne også løse problemet ved at opskrive Lagrange funktionen</p>
+<p><span class="math display">\[Z = 2K^{0,5} \cdot L^{0,5} + \lambda(1 - 1K - 0,5L)\]</span></p>
+<p>Finde partielle afledede mht. K, L og <span class="math inline">\(\lambda\)</span> og sætter disse lig med 0</p>
+<p><span class="math display">\[\frac{\partial Z}{\partial L} = \sqrt{\frac{K}{L}} - 0,5\lambda = 0\]</span></p>
+<p><span class="math display">\[\frac{\partial Z}{\partial K} = \sqrt{\frac{L}{K}} - \lambda = 0\]</span></p>
+<p><span class="math display">\[\frac{\partial Z}{\partial\lambda} = 1 - 0.5L - 1K = 0\]</span></p>
+<p>Vi dividerer første ligning med anden ligning og reducerer:</p>
+<p><span class="math display">\[\frac{K}{L} = \frac{0,5}{1} = 0,5\]</span></p>
+<p><span class="math display">\[1 - 0.5L - 1K = 0\]</span></p>
+<p><span class="math display">\[{1 - 0.5L - 1 \cdot 0,5L = 0 \Leftrightarrow }{L = 1}\]</span></p>
+<p>Ved at indsætte værdien af L i første ligning får vi:</p>
+<p><span class="math display">\[\frac{K}{1} = K = 0,5\]</span></p>
+<p>Vi kunne altså løse problemet på flere måder.</p>
+</div>
+<div id="eksempel-pa-optimering-af-omkostningsniveauet-for-fast-produktionsniveau" class="section level3">
+<h3><span class="header-section-number">24.3.5</span> Eksempel på optimering af omkostningsniveauet for fast produktionsniveau</h3>
+<p>Et problem hvor man skal ud fra et fast produktionsniveau, skal finde den optimale L og K kombination kan derimod løses eksplicit, det er fordi vi i denne opgave har en simpel omkostningsfunktion, der giver isokost linjer med samme hældning <span class="math inline">\(- 0,5\)</span>. Vores problem kan beskrives som.</p>
+<p><span class="math display">\[Min\ C = 1K + 0,5L\]</span></p>
+<p><span class="math display">\[{\text{u.b.}}{3 = 2K^{0,5} \cdot L^{0,5}}\]</span></p>
+<p>Her har vi valgt har et fast produktionsoutput <span class="math inline">\(Q = 3\)</span>. Vi kan her undlade solver og Lagrange optimering, vi skal bare bestemme for hvilket L og K isokvant kurven <span class="math inline">\(3 = 2K^{0,5} \cdot L^{0,5}\)</span> har hældning <span class="math inline">\(- 0,5\)</span>. Vi isolerer K, så funktionen har den sædvanlige forskrift med y/K på venstresiden</p>
+<p><span class="math display">\[2K^{0,5} = \frac{3}{L^{0,5}} \Leftrightarrow\]</span></p>
+<p><span class="math display">\[K^{0,5} = \frac{3}{2}L^{- 0,5} \Leftrightarrow\]</span></p>
+<p><span class="math display">\[K = \frac{3^{2}}{2^{2}}L^{- {0,5}^{2}} \Leftrightarrow\]</span></p>
+<p><span class="math display">\[K = \frac{9}{4}L^{- 1}\]</span></p>
+<p><span class="math display">\[{\ K&#39; = - \frac{9}{4}L^{- 2}}\]</span></p>
+<p>Vi ved at hældningen <span class="math inline">\(MRTS = - 0,5\)</span> , hvilket netop er venstresiden, og vi kender Q. Vi ender med en ligning med en ubekendt:</p>
+<p><span class="math display">\[- 0,5 = - \frac{9}{4L^{2}}\]</span></p>
+<p><span class="math display">\[- 4L^{2} \cdot - 0,5 = 9\]</span></p>
+<p><span class="math display">\[{L^{2} = \frac{9}{2}}\]</span></p>
+<p><span class="math display">\[L = \sqrt{\frac{9}{2}\ } \approx 2,1213\]</span></p>
+<p>Vi kan bestemme K ved at indsætte værdien af L, i isoquant funktionen.</p>
+<p><span class="math display">\[K = \frac{9}{4 \cdot \sqrt{\frac{9}{2}\ }} = \frac{9}{\sqrt{4} \cdot \sqrt{4} \cdot \sqrt{\frac{9}{2}\ }} = \frac{9}{\sqrt{72\ }} = \ 1,06066\]</span></p>
+<p>Den billigste K, L sammensætning ved et fast produktionsoutput på 3, er altså (2.1213, 1.06066). Omkostningen bliver:</p>
+<p><span class="math display">\[C = 1 \cdot 2.1213 + 0.5 \cdot 1.06066 = 2.65163\]</span></p>
+<p><img src="media/image79.png" style="width:6in;height:3.65232in" /></p>
+<p>Bemærk i øvrigt de partielle aflede af produktionsfunktionen i vores eksempel <span class="math inline">\(Q = 2L^{0,5} \cdot K^{0,5}\)</span>, kaldes med økonomiske termer marginalproduktet af kapital <span class="math inline">\(MP_{k}\)</span></p>
+<p><span class="math display">\[{MP_{K} = \frac{\partial Q}{\partial K} = 0,5 \cdot 2L^{0,5}K^{0,5 - 1} = L^{0,5} \cdot K^{- 0,5} = }{\frac{L^{0,5}}{K^{0,5}} = \left( \frac{L}{K} \right)^{0,5} = \sqrt{\frac{L}{K}}}\]</span></p>
+<p>Med synonyme udregninger fås <span class="math inline">\(MP_{L}\)</span></p>
+<p><span class="math display">\[MP_{L} = \frac{\partial Q}{\partial L} = \sqrt{\frac{K}{L}}\]</span></p>
+<p>Der gælder i et <span class="math inline">\((L,K)\)</span> optimum</p>
+<p><span class="math display">\[MRTS = \frac{MP_{L}}{MP_{K}}\]</span></p>
+<p>Så for vort optimum skal altså gælde at:</p>
+<p><span class="math display">\[\frac{MP_{L}}{MP_{K}} = 0,5\]</span></p>
+<p>Udregningen bliver noget lang men det ender godt.</p>
+<p><span class="math display">\[\frac{MP_{L}}{MP_{K}} = \sqrt{\frac{\frac{\frac{3}{\sqrt{24}}}{\sqrt{\frac{3}{2}\ }}}{\frac{\sqrt{\frac{3}{2}\ }}{\frac{3}{\sqrt{24}}}} =}\left( \frac{\frac{\frac{\sqrt{9}}{\sqrt{24}}}{\sqrt{\frac{3}{2}\ }}}{\frac{\sqrt{\frac{3}{2}\ }}{\frac{\sqrt{9}}{\sqrt{24}}}} \right)^{0,5} = \left( \frac{\frac{\frac{9}{24}}{\frac{3}{2}}}{\frac{\frac{3}{2}}{\frac{9}{24}}} \right)^{0,5 \cdot 0,5} = \left( \frac{\frac{9}{24} \cdot \frac{2}{3}}{\frac{3}{2} \cdot \frac{24}{9}} \right)^{0,25} = \left( \frac{\frac{18}{72}}{\frac{72}{18}} \right)^{0,25} = \left( \frac{2}{8} \cdot \frac{2}{8} \right)^{0,25} = \left( \frac{1}{16} \right)^{0.25} = \left( \frac{1}{2} \cdot \frac{1}{2} \cdot \frac{1}{2} \cdot \frac{1}{2} \right)^{0,25} = \frac{1}{2}\]</span></p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="logaritmefunktioner.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

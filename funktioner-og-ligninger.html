@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>test</title>
+  <meta name="description" content="test">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="test" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="test" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="test" />
+  
+  <meta name="twitter:description" content="test" />
+  
+
+<meta name="author" content="Thomas Petersen">
+
+
+<meta name="date" content="2018-08-01">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="prev" href="procenter-indekstal-og-regneregler.html">
+<link rel="next" href="polynomier.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="libs/htmlwidgets-1.2/htmlwidgets.js"></script>
+<script src="libs/proj4js-2.3.15/proj4.js"></script>
+<link href="libs/highcharts-5.0.6/css/motion.css" rel="stylesheet" />
+<script src="libs/highcharts-5.0.6/highstock.js"></script>
+<script src="libs/highcharts-5.0.6/highcharts-3d.js"></script>
+<script src="libs/highcharts-5.0.6/highcharts-more.js"></script>
+<script src="libs/highcharts-5.0.6/modules/annotations.js"></script>
+<script src="libs/highcharts-5.0.6/modules/broken-axis.js"></script>
+<script src="libs/highcharts-5.0.6/modules/data.js"></script>
+<script src="libs/highcharts-5.0.6/modules/drilldown.js"></script>
+<script src="libs/highcharts-5.0.6/modules/exporting.js"></script>
+<script src="libs/highcharts-5.0.6/modules/funnel.js"></script>
+<script src="libs/highcharts-5.0.6/modules/heatmap.js"></script>
+<script src="libs/highcharts-5.0.6/modules/map.js"></script>
+<script src="libs/highcharts-5.0.6/modules/no-data-to-display.js"></script>
+<script src="libs/highcharts-5.0.6/modules/offline-exporting.js"></script>
+<script src="libs/highcharts-5.0.6/modules/solid-gauge.js"></script>
+<script src="libs/highcharts-5.0.6/modules/treemap.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/annotations.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/draggable-legend.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/draggable-points.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/export-csv.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/grouped-categories.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/motion.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/pattern-fill-v2.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/tooltip-delay.js"></script>
+<script src="libs/highcharts-5.0.6/custom/reset.js"></script>
+<script src="libs/highcharts-5.0.6/custom/symbols-extra.js"></script>
+<script src="libs/highcharts-5.0.6/custom/text-symbols.js"></script>
+<link href="libs/fontawesome-4.5.0/font-awesome.min.css" rel="stylesheet" />
+<link href="libs/htmlwdgtgrid-1/htmlwdgtgrid.css" rel="stylesheet" />
+<script src="libs/highchart-binding-0.5.0/highchart.js"></script>
+<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="libs/datatables-binding-0.4/datatables.js"></script>
+<link href="libs/dt-core-1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.10.16/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.10.16/js/jquery.dataTables.min.js"></script>
+<link href="libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
+<link href="libs/dygraphs-1.1.1/dygraph.css" rel="stylesheet" />
+<script src="libs/dygraphs-1.1.1/dygraph-combined.js"></script>
+<script src="libs/moment-2.8.4/moment.js"></script>
+<script src="libs/moment-timezone-0.2.5/moment-timezone-with-data.js"></script>
+<script src="libs/moment-fquarter-1.0.0/moment-fquarter.min.js"></script>
+<script src="libs/dygraphs-binding-1.1.1.4/dygraphs.js"></script>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href=""https://tepedu.dk"">tepedu</a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#section"></a></li>
+<li class="chapter" data-level="1" data-path="indledning.html"><a href="indledning.html"><i class="fa fa-check"></i><b>1</b> Indledning</a></li>
+<li class="chapter" data-level="2" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html"><i class="fa fa-check"></i><b>2</b> Procenter, indekstal og regneregler</a><ul>
+<li class="chapter" data-level="2.1" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#procentregneregler"><i class="fa fa-check"></i><b>2.1</b> Procentregneregler</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#video-procentregning"><i class="fa fa-check"></i><b>2.1.1</b> Video procentregning</a></li>
+<li class="chapter" data-level="2.1.2" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#video-excel-basisvideo."><i class="fa fa-check"></i><b>2.1.2</b> Video Excel basisvideo.</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#indekstal"><i class="fa fa-check"></i><b>2.2</b> Indekstal</a></li>
+<li class="chapter" data-level="2.3" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#procentpoint"><i class="fa fa-check"></i><b>2.3</b> Procentpoint</a></li>
+<li class="chapter" data-level="2.4" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#reduktionsregneregler"><i class="fa fa-check"></i><b>2.4</b> Reduktionsregneregler</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#video-regnearternes-hieraki."><i class="fa fa-check"></i><b>2.4.1</b> Video regnearternes hieraki.</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#brkregneregler"><i class="fa fa-check"></i><b>2.5</b> Brøkregneregler</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#video-brkregneregler"><i class="fa fa-check"></i><b>2.5.1</b> Video Brøkregneregler</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#potensregneregler"><i class="fa fa-check"></i><b>2.6</b> Potensregneregler</a><ul>
+<li class="chapter" data-level="2.6.1" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#video-potensregneregler"><i class="fa fa-check"></i><b>2.6.1</b> Video potensregneregler</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html"><i class="fa fa-check"></i><b>3</b> Funktioner og ligninger</a><ul>
+<li class="chapter" data-level="3.1" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#linere-funktioner"><i class="fa fa-check"></i><b>3.1</b> Lineære funktioner</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#video-funktioner"><i class="fa fa-check"></i><b>3.1.1</b> Video funktioner</a></li>
+<li class="chapter" data-level="3.1.2" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#video-geogebra-hjlpeprogram-til-funktioner"><i class="fa fa-check"></i><b>3.1.2</b> Video Geogebra hjælpeprogram til funktioner</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#generel-forskift-linir-funktion"><i class="fa fa-check"></i><b>3.2</b> Generel Forskift liniær funktion</a></li>
+<li class="chapter" data-level="3.3" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#bestemmelse-af-forskrift-baseret-pa-2-punkter"><i class="fa fa-check"></i><b>3.3</b> Bestemmelse af forskrift baseret på 2 punkter</a></li>
+<li class="chapter" data-level="3.4" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#lsning-af-ligninger"><i class="fa fa-check"></i><b>3.4</b> Løsning af ligninger</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#video-lsning-af-ligninger"><i class="fa fa-check"></i><b>3.4.1</b> Video Løsning af ligninger</a></li>
+<li class="chapter" data-level="3.4.2" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#video-lsning-af-uligheder"><i class="fa fa-check"></i><b>3.4.2</b> Video Løsning af uligheder</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#ligninger-med-2-ubekendte."><i class="fa fa-check"></i><b>3.5</b> 2 ligninger med 2 ubekendte.</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#video-2-ligninger-med-2-ubekendte."><i class="fa fa-check"></i><b>3.5.1</b> Video 2 ligninger med 2 ubekendte.</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#udbuds--og-eftersprgselskurver"><i class="fa fa-check"></i><b>3.6</b> Udbuds- og efterspørgselskurver</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="polynomier.html"><a href="polynomier.html"><i class="fa fa-check"></i><b>4</b> Polynomier</a><ul>
+<li class="chapter" data-level="4.1" data-path="polynomier.html"><a href="polynomier.html#gradspolynomier"><i class="fa fa-check"></i><b>4.1</b> 2. Gradspolynomier</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="polynomier.html"><a href="polynomier.html#video-2.-gradspolynomier."><i class="fa fa-check"></i><b>4.1.1</b> Video 2. Gradspolynomier.</a></li>
+<li class="chapter" data-level="4.1.2" data-path="polynomier.html"><a href="polynomier.html#video-andengradsligninger."><i class="fa fa-check"></i><b>4.1.2</b> Video Andengradsligninger.</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="finansiel-regning.html"><a href="finansiel-regning.html"><i class="fa fa-check"></i><b>5</b> Finansiel regning</a><ul>
+<li class="chapter" data-level="5.0.1" data-path="finansiel-regning.html"><a href="finansiel-regning.html#nutidsvrdi-og-fremtidsvrdi-af-en-kapital"><i class="fa fa-check"></i><b>5.0.1</b> Nutidsværdi og fremtidsværdi af en kapital</a></li>
+<li class="chapter" data-level="5.1" data-path="finansiel-regning.html"><a href="finansiel-regning.html#annuiteter"><i class="fa fa-check"></i><b>5.1</b> Annuiteter</a></li>
+<li class="chapter" data-level="5.2" data-path="finansiel-regning.html"><a href="finansiel-regning.html#fremtidsvrdi-af-en-annuitet"><i class="fa fa-check"></i><b>5.2</b> Fremtidsværdi af en annuitet</a></li>
+<li class="chapter" data-level="5.3" data-path="finansiel-regning.html"><a href="finansiel-regning.html#nutidsvrdi-af-en-annuitet"><i class="fa fa-check"></i><b>5.3</b> Nutidsværdi af en annuitet</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="differentialregning.html"><a href="differentialregning.html"><i class="fa fa-check"></i><b>6</b> Differentialregning</a><ul>
+<li class="chapter" data-level="6.1" data-path="differentialregning.html"><a href="differentialregning.html#regneregler-differentiation"><i class="fa fa-check"></i><b>6.1</b> Regneregler differentiation</a></li>
+<li class="chapter" data-level="6.2" data-path="differentialregning.html"><a href="differentialregning.html#ekstremumspunkter"><i class="fa fa-check"></i><b>6.2</b> Ekstremumspunkter</a></li>
+<li class="chapter" data-level="6.3" data-path="differentialregning.html"><a href="differentialregning.html#lokale-og-globale-ekstremumspunkter"><i class="fa fa-check"></i><b>6.3</b> Lokale og globale ekstremumspunkter</a></li>
+<li class="chapter" data-level="6.4" data-path="differentialregning.html"><a href="differentialregning.html#konveksitet-og-konkavitet"><i class="fa fa-check"></i><b>6.4</b> Konveksitet og konkavitet</a></li>
+<li class="chapter" data-level="6.5" data-path="differentialregning.html"><a href="differentialregning.html#sammenhnge-avc-atc-tc-tr-mc-mr-og-mathbfpi"><i class="fa fa-check"></i><b>6.5</b> Sammenhænge AVC, ATC, TC, TR, MC, MR og <span class="math inline">\(\mathbf{\pi}\)</span></a></li>
+<li class="chapter" data-level="6.6" data-path="differentialregning.html"><a href="differentialregning.html#optimeringseksempel"><i class="fa fa-check"></i><b>6.6</b> Optimeringseksempel</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="excel-oversttelser.html"><a href="excel-oversttelser.html"><i class="fa fa-check"></i><b>7</b> Excel oversættelser</a></li>
+<li class="divider"></li>
+<li><a href="https://tepedu.dk" target="blank">tepedu</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">test</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="funktioner-og-ligninger" class="section level1">
+<h1><span class="header-section-number">Kapitel 3</span> Funktioner og ligninger</h1>
+<div id="linere-funktioner" class="section level2">
+<h2><span class="header-section-number">3.1</span> Lineære funktioner</h2>
+<div id="video-funktioner" class="section level3">
+<h3><span class="header-section-number">3.1.1</span> Video funktioner</h3>
+<br>
+<div class="embed-container">
+<iframe src="https://player.vimeo.com/video/282141226" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen>
+</iframe>
+</div>
+<p><br></p>
+</div>
+<div id="video-geogebra-hjlpeprogram-til-funktioner" class="section level3">
+<h3><span class="header-section-number">3.1.2</span> Video Geogebra hjælpeprogram til funktioner</h3>
+<p>Man kan med fordel benytte fx. Geogebra til at tegne og arbejde med funktioner.</p>
+<br>
+<div class="embed-container">
+<iframe src="https://player.vimeo.com/video/282491959" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen>
+</iframe>
+</div>
+<p><br></p>
+</div>
+</div>
+<div id="generel-forskift-linir-funktion" class="section level2">
+<h2><span class="header-section-number">3.2</span> Generel Forskift liniær funktion</h2>
+<p><img src="media/image4.png" style="width:6in;height:3.65132in" /></p>
+<p>En funktion er et redskab, der beskriver sammenhængen mellem en uafhængig variabel x og en afhængig variabel y = f(x). Formen for en lineær funktionsforskrift skrives som:</p>
+<p><span class="math display">\[f\left( x \right) = ax + b\]</span></p>
+<p><span class="math display">\[hvor\ a,\ b\  \in \mathbb{R}\]</span></p>
+<p>Vi kalder a for hældningskoefficienten, dette tal fortæller hvor meget y ændrer sig når x vokser med 1. Det vil sige hvor meget ændres funktionsværdien, når vi går en til højre på x-aksen. b er skæringen med y-aksen. Punktet hvor linjen skærer y-aksen har altid første-koordinat 0, dvs. punktet hedder (0,b).</p>
+<p>På figuren ovenfor er <span class="math inline">\(f\left( x \right) = 0,5x + 2\)</span> tegnet ind. Her ses som nævnt, at linjen skærer y-aksen i (0,2), og hældningskoefficienten er 0,5.</p>
+<p>Når man indsætter en x-værdi i funktionsforskriften får man funktionsværdien eller y-værdien. F.eks. vil x=2 give en y-værdi <span class="math inline">\(f\left( 2 \right) = 0,5 \cdot 2 + 2 = 3\)</span>, det betyder punktet <span class="math inline">\(\left( 2,\ 3 \right)\)</span> ligger på den rette linje.</p>
+<p>En lineær funktion med positiv hældning <span class="math inline">\(\left( her\ a = 0,5 \right)\)</span> er en monotont voksende funktion, en sådan funktion ligner en bakke der går opad. Jo større a er des stejlere er bakken. En lineær funktion med negativ hældning, er en funktion der er monotont aftagende, det er en funktion der går nedad.</p>
+</div>
+<div id="bestemmelse-af-forskrift-baseret-pa-2-punkter" class="section level2">
+<h2><span class="header-section-number">3.3</span> Bestemmelse af forskrift baseret på 2 punkter</h2>
+<p>Hvis vi kender 2 punkter <span class="math inline">\(\left( x_{1},y_{1} \right)\ og\ (x_{2},y_{2})\)</span> på en ligning kan vi bestemme funktionsforskriften, <span class="math inline">\(f(x) = ax + b\)</span></p>
+<p><span class="math display">\[a = \frac{y_{1} - y_{2}}{x_{1} - x_{2}}\]</span></p>
+<p><span class="math display">\[b = y_{1} - ax_{1}\]</span></p>
+<p>Hvorfor ? Fordi vi kan skrive opskrive 2 ligninger med 2 ubekendte (a og b), når vi kender den generelle funktionsforskrift og de to punkter:</p>
+<p><span class="math display">\[y_{1} = ax_{1} + b\]</span></p>
+<p><span class="math display">\[{y_{2} = ax_{2} + b}\]</span></p>
+<p>Se i senere afsnit hvordan man kan løse 2 ligninger med 2 ubekendte, her er de ubekendte jo a og b alle andre størrelser i ligningerne er kendte. Man kan så trække den ene ligning fra den anden, så forsvinder b, og man har en ligning med en ubekendt tilbage.</p>
+<p>Hvis vi kender 2 punkter (2,3) og (4,1) på en lineær funktion og ønsker at bestemme forskriften, kan vi altså først finde a:</p>
+<p><span class="math display">\[a = \frac{y_{1} - y_{2}}{x_{1} - x_{2}} = \frac{4 - 2}{1 - 3} = - \frac{2}{2} = - 1\]</span></p>
+<p>Bemærk det er ligegyldigt hvilket punkt man vælger som <span class="math inline">\((x_{1},y_{1})\)</span> og <span class="math inline">\((x_{2},y_{2})\)</span>, men rækkefølgen i brøken, når man har valgt, er vigtig.</p>
+<p>Man bestemmer nemt b, da det nu er den eneste ukendte i de 2 ligninger, behøver vi blot indsætte de øvrige kendte værdier i den ene ligning.</p>
+<p><span class="math display">\[b = y_{1} - ax_{1} = 3 - \left( - 1 \right) \cdot 2 = 5\]</span></p>
+<p>Så forskriften bliver altså</p>
+<p><span class="math display">\[y = - x + 5\]</span></p>
+<p><img src="media/image5.png" style="width:6in;height:3.65232in" /></p>
+<p>Man kan også benytte <a href="https://www.wolframalpha.com" target="_blank">www.wolframalpha.com her.</a> til at bestemme linjen gennem 2 punkter. Skriv i feltet: line (2,3) and (4,1)</p>
+<p>Det giver ligeledes forskriften for linjen. Man kan ligeledes benytte Wolfram til løsning af uligheder.</p>
+</div>
+<div id="lsning-af-ligninger" class="section level2">
+<h2><span class="header-section-number">3.4</span> Løsning af ligninger</h2>
+<div id="video-lsning-af-ligninger" class="section level3">
+<h3><span class="header-section-number">3.4.1</span> Video Løsning af ligninger</h3>
+<br>
+<div class="embed-container">
+<iframe src="https://player.vimeo.com/video/282141132" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen>
+</iframe>
+</div>
+<p><br></p>
+</div>
+<div id="video-lsning-af-uligheder" class="section level3">
+<h3><span class="header-section-number">3.4.2</span> Video Løsning af uligheder</h3>
+<br>
+<div class="embed-container">
+<iframe src="https://player.vimeo.com/video/282141498" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen>
+</iframe>
+</div>
+<p><br></p>
+<p>Vi har følgende regneregler for ligninger:</p>
+<p>Man må addere og subtrahere med en konstant c, når man gør det på både højre og venstresiden.</p>
+<p><span class="math display">\[a = b \Leftrightarrow a + c = b + c\]</span></p>
+<p><span class="math display">\[a = b \Leftrightarrow a - c = b - c\]</span></p>
+<p>Man må multiplicere og dividere med en konstant c forskellig fra 0, f.eks:</p>
+<p><span class="math display">\[a = b \Leftrightarrow a*c = b*c\]</span></p>
+<p><span class="math display">\[a = b \Leftrightarrow \frac{a}{c} = \frac{b}{c}\]</span></p>
+<p>At løse en ligning betyder: bestem de variabelværdier for hvilken ligningen er sand, vi kalder mængden af disse værdier løsningsmængden L. Hvis vi betragter 1. Grads ligningen:</p>
+<p><span class="math display">\[3x + 2 = 4\]</span></p>
+<p>Her tilhører x=3 f.eks. ikke løsningsmængden L. for</p>
+<p><span class="math display">\[3*3 + 2 \neq 4\]</span></p>
+<p>Man kan hurtigt bestemme løsningsmængden ved at isolere x.</p>
+<p><span class="math display">\[3x + 2 = 4 \Leftrightarrow\]</span></p>
+<p><span class="math display">\[3x + 2 - 2 = 4 - 2 \Leftrightarrow\]</span></p>
+<p><span class="math display">\[3x = 2 \Leftrightarrow\]</span></p>
+<p><span class="math display">\[\frac{3x}{3} = \frac{2}{3} \Leftrightarrow\]</span></p>
+<p><span class="math display">\[x = \frac{2}{3}\Leftrightarrow\]</span></p>
+<p><span class="math display">\[L = \{\frac{2}{3}\}\]</span></p>
+<p>Du kan bruge Wolframalpha til at tjekke dit resultat, indsæt 3x + 2 = 4 nedenfor og tryk enter, så løser Wolframalpha ligningen for dig. Du kan se hvorledes du gør dette ved at klikke <a href="https://www.wolframalpha.com/input/?i=3+x+%3D+2+y+%2B+6+and+y+%3D+1%2F2+x+%2B+1" target="_blank">her.</a></p>
+<p>Der findes specialtilfælde af ligninger hvor L = Ø dvs. ingen løsning.</p>
+<p><span class="math display">\[{5x = 7 + 5x}\Leftrightarrow{0x = 7}\Leftrightarrow{\ L = Ø}\]</span></p>
+<p>Da der ikke findes x-værdier der kan gøre ligningen 0x=7 sand, siger vi løsningsmængden er Ø eller tom. Wolframalpha skriver “no solutions exist”.</p>
+<p>Der findes også ligninger der er sande ligegyldigt hvilken værdi x har, så skriver vi:</p>
+<p><span class="math inline">\(L\mathbb{= R}\)</span></p>
+<p><span class="math display">\[{5x + 3 = 7 + 5x - 4}\Leftrightarrow{0x = 0}\Leftrightarrow{\text{L}=\mathbb{R}}\]</span></p>
+<p>Man kan måske få en bedre forståelse ved at løse 1. Gradsligningen, ved at indtegne hhv. højre- og venstreside som funktioner i et koordinatsystem.</p>
+<p><img src="media/image6.png" style="width:6in;height:3.65132in" /></p>
+</div>
+</div>
+<div id="ligninger-med-2-ubekendte." class="section level2">
+<h2><span class="header-section-number">3.5</span> 2 ligninger med 2 ubekendte.</h2>
+<div id="video-2-ligninger-med-2-ubekendte." class="section level3">
+<h3><span class="header-section-number">3.5.1</span> Video 2 ligninger med 2 ubekendte.</h3>
+<br>
+<div class="embed-container">
+<iframe src="https://player.vimeo.com/video/282140987" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen>
+</iframe>
+</div>
+<p><br></p>
+<p>En ligning med 2 ubekendte kan f.eks. være:</p>
+<p><span class="math display">\[3x = 2y + 6\]</span></p>
+<p>Denne ligning kan vi omskrive til:</p>
+<p><span class="math display">\[{y = 1\frac{1}{2}x - 3}\]</span></p>
+<p>I koordinatsystemet vil denne ligning kunne afbilledes som nedenfor:</p>
+<p><img src="media/image7.png" style="width:6in;height:3.65232in" /></p>
+<p>Hvis man skal løse 2 ligninger med 2 ubekendte, skal man gøre det samme, som når man løser en ligning med en ubekendt. Man skal altså finde de værdier af de 2 ubekendte der gør begge ligninger sande samtidigt. Vi kalder også 2 ligninger med 2 ubekendte for et ligningssystem. Sådanne ligninger med 2 ubekendte kan tegnes som rette linjer i et koordinatsystem, og derefter løses grafisk. Det betyder ikke noget at de ubekendte hedder noget andet end x og y, man navngiver dem blot som hhv. x og y. Hvis man tegner ligningerne med de 2 ubekendte ind i koordinatsystemet, er skæringspunktet mellem de to rette linjer, netop der hvor begge ligninger er sande.</p>
+<p>Hvis vi f.eks. skal løse de 2 ligninger:</p>
+<p><span class="math display">\[3x = 2y + 6\]</span></p>
+<p><span class="math display">\[y = \frac{1}{2}x + 1\]</span></p>
+<p>Kan vi omskrive dem dvs. isolere y’erne på venstresiden:</p>
+<p><span class="math display">\[y = 1\frac{1}{2}x - 3\]</span></p>
+<p><span class="math display">\[y = \frac{1}{2}x + 1\]</span></p>
+<p>Og vi indtegner disse og finder skæringspunktet:</p>
+<p><span class="math display">\[3x = 2y + 6\]</span></p>
+<p><span class="math display">\[y = 2x + 1\]</span></p>
+<p><img src="media/image8.png" style="width:6in;height:3.65232in" /></p>
+<p>Ligesom med en ligning kan løsningsmængden være tom (hvis de 2 linjer de 2 ligninger danner er parallelle) eller <span class="math inline">\(\mathbb{R}^{2}\)</span>, (hvis ligningerne der dannes er identiske ). Men oftest vil linjerne skære hinanden.</p>
+<p><img src="media/image9.png" style="width:6in;height:3.65232in" /></p>
+<p>Der findes flere metoder til løsning af 2 ligninger med 2 ubekendte bl.a. substitutionsmetoden. Når vi benytter substitutionsmetoden, isolerer vi y i begge ligninger:</p>
+<p><span class="math display">\[y = 1\frac{1}{2}x - 3\]</span></p>
+<p><span class="math display">\[y = \frac{1}{2}x + 1\]</span></p>
+<p>Vi ved at y i første og anden ligning skal have samme værdi når vi finder en løsning. Derfor ved vi også at venstresiderne skal være ens. Vi sætter så venstresiderne lig med hinanden og isolerer x:</p>
+<p><span class="math display">\[1\frac{1}{2}x - 3 = \frac{1}{2}x + 1\]</span></p>
+<p><span class="math display">\[1\frac{1}{2}x - \frac{1}{2}x = 3 + 1\]</span></p>
+<p><span class="math display">\[x = 4\]</span></p>
+<p>Vi ved nu at når x er lig med 4, har vi en løsning. Så kan vi bare indsætte x=4, i en af de oprindelige ligninger og finde værdien af y.</p>
+<p><span class="math display">\[y = 1\frac{1}{2}x - 3\]</span></p>
+<p><span class="math display">\[y = 1\frac{1}{2} \cdot 4 - 3\]</span></p>
+<p><span class="math display">\[y = 3\]</span></p>
+<p>og vi ser at vi får samme løsning som da vi benyttede den grafiske metode.</p>
+<p><span class="math display">\[(4,3)\]</span></p>
+<p>Vi kan ligeledes løse 2 ligninger med 2 ubekendte vha. wolfram. Skriv på <a href="https://www.wolframalpha.com" target="_blank"> https://www.wolframalpha.com</a>: 3 x = 2 y + 6 and y = 1/2 x + 1</p>
+<p>Så får vi skæringen (4,3)</p>
+<p>Man kan løse ligningssystemer med flere end 2 ubekendte med matrix kommandoerne mmult og minverse i excel, men dette når vi ikke at gennemgå på dette kursus.</p>
+<p>Vi bruger 2 ligninger med 2 ubekendte i mange økonomiske sammenhænge til fx. at finde den optimale mængde der skal afsættes for. Eller får at finde ligevægten på et marked som i eksemplet nedenfor.</p>
+</div>
+</div>
+<div id="udbuds--og-eftersprgselskurver" class="section level2">
+<h2><span class="header-section-number">3.6</span> Udbuds- og efterspørgselskurver</h2>
+<p>En vares prissætning er afgørende for hvor meget man kan afsætte af den pågældende vare. Jo højere pris desto færre varer kan man afsætte. Tilsvarende vil prissætningen være afgørende for, hvor meget producenterne vil udbyde, jo højere pris des flere varer udbydes. Vi forudsætter her at sammenhængen mellem pris og afsætning er lineær. Vi kan tegne efterspørgselskurver i et koordinatsystem med pris på y-aksen og afsætning på x-aksen. Dette er omvendt af hvordan vi normalt i matematik ville tegne en lineær funktion, idet vores forklarende variabel pris der styrer afsætningen er y.</p>
+<p><img src="media/image10.png" style="width:6in;height:3.65132in" /></p>
+<p>Efterspørgselskurven har negativ hældning og udbudskurven har positiv hældning.</p>
+<p>Et marked er i ligevægt hvor udbuds- og efterspørgselskurven skærer hinanden.</p>
+<p><img src="media/image11.png" style="width:6in;height:3.65132in" /></p>
+<p>Hvordan finder vi ligevægtspris og afsætning?</p>
+<p>Det gør vi ved <a href="funktioner-og-ligninger.html#ligninger-med-2-ubekendte.">substitutionsmetoden</a>, som vi så tidligere.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="procenter-indekstal-og-regneregler.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="polynomier.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

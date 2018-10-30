@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>test</title>
+  <meta name="description" content="test">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="test" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="test" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="test" />
+  
+  <meta name="twitter:description" content="test" />
+  
+
+<meta name="author" content="Thomas Petersen">
+
+
+<meta name="date" content="2018-08-01">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="prev" href="funktioner-og-ligninger.html">
+<link rel="next" href="finansiel-regning.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="libs/htmlwidgets-1.2/htmlwidgets.js"></script>
+<script src="libs/proj4js-2.3.15/proj4.js"></script>
+<link href="libs/highcharts-5.0.6/css/motion.css" rel="stylesheet" />
+<script src="libs/highcharts-5.0.6/highstock.js"></script>
+<script src="libs/highcharts-5.0.6/highcharts-3d.js"></script>
+<script src="libs/highcharts-5.0.6/highcharts-more.js"></script>
+<script src="libs/highcharts-5.0.6/modules/annotations.js"></script>
+<script src="libs/highcharts-5.0.6/modules/broken-axis.js"></script>
+<script src="libs/highcharts-5.0.6/modules/data.js"></script>
+<script src="libs/highcharts-5.0.6/modules/drilldown.js"></script>
+<script src="libs/highcharts-5.0.6/modules/exporting.js"></script>
+<script src="libs/highcharts-5.0.6/modules/funnel.js"></script>
+<script src="libs/highcharts-5.0.6/modules/heatmap.js"></script>
+<script src="libs/highcharts-5.0.6/modules/map.js"></script>
+<script src="libs/highcharts-5.0.6/modules/no-data-to-display.js"></script>
+<script src="libs/highcharts-5.0.6/modules/offline-exporting.js"></script>
+<script src="libs/highcharts-5.0.6/modules/solid-gauge.js"></script>
+<script src="libs/highcharts-5.0.6/modules/treemap.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/annotations.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/draggable-legend.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/draggable-points.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/export-csv.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/grouped-categories.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/motion.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/pattern-fill-v2.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/tooltip-delay.js"></script>
+<script src="libs/highcharts-5.0.6/custom/reset.js"></script>
+<script src="libs/highcharts-5.0.6/custom/symbols-extra.js"></script>
+<script src="libs/highcharts-5.0.6/custom/text-symbols.js"></script>
+<link href="libs/fontawesome-4.5.0/font-awesome.min.css" rel="stylesheet" />
+<link href="libs/htmlwdgtgrid-1/htmlwdgtgrid.css" rel="stylesheet" />
+<script src="libs/highchart-binding-0.5.0/highchart.js"></script>
+<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="libs/datatables-binding-0.4/datatables.js"></script>
+<link href="libs/dt-core-1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.10.16/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.10.16/js/jquery.dataTables.min.js"></script>
+<link href="libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
+<link href="libs/dygraphs-1.1.1/dygraph.css" rel="stylesheet" />
+<script src="libs/dygraphs-1.1.1/dygraph-combined.js"></script>
+<script src="libs/moment-2.8.4/moment.js"></script>
+<script src="libs/moment-timezone-0.2.5/moment-timezone-with-data.js"></script>
+<script src="libs/moment-fquarter-1.0.0/moment-fquarter.min.js"></script>
+<script src="libs/dygraphs-binding-1.1.1.4/dygraphs.js"></script>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href=""https://tepedu.dk"">tepedu</a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#section"></a></li>
+<li class="chapter" data-level="1" data-path="indledning.html"><a href="indledning.html"><i class="fa fa-check"></i><b>1</b> Indledning</a></li>
+<li class="chapter" data-level="2" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html"><i class="fa fa-check"></i><b>2</b> Procenter, indekstal og regneregler</a><ul>
+<li class="chapter" data-level="2.1" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#procentregneregler"><i class="fa fa-check"></i><b>2.1</b> Procentregneregler</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#video-procentregning"><i class="fa fa-check"></i><b>2.1.1</b> Video procentregning</a></li>
+<li class="chapter" data-level="2.1.2" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#video-excel-basisvideo."><i class="fa fa-check"></i><b>2.1.2</b> Video Excel basisvideo.</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#indekstal"><i class="fa fa-check"></i><b>2.2</b> Indekstal</a></li>
+<li class="chapter" data-level="2.3" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#procentpoint"><i class="fa fa-check"></i><b>2.3</b> Procentpoint</a></li>
+<li class="chapter" data-level="2.4" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#reduktionsregneregler"><i class="fa fa-check"></i><b>2.4</b> Reduktionsregneregler</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#video-regnearternes-hieraki."><i class="fa fa-check"></i><b>2.4.1</b> Video regnearternes hieraki.</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#brkregneregler"><i class="fa fa-check"></i><b>2.5</b> Brøkregneregler</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#video-brkregneregler"><i class="fa fa-check"></i><b>2.5.1</b> Video Brøkregneregler</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#potensregneregler"><i class="fa fa-check"></i><b>2.6</b> Potensregneregler</a><ul>
+<li class="chapter" data-level="2.6.1" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#video-potensregneregler"><i class="fa fa-check"></i><b>2.6.1</b> Video potensregneregler</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html"><i class="fa fa-check"></i><b>3</b> Funktioner og ligninger</a><ul>
+<li class="chapter" data-level="3.1" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#linere-funktioner"><i class="fa fa-check"></i><b>3.1</b> Lineære funktioner</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#video-funktioner"><i class="fa fa-check"></i><b>3.1.1</b> Video funktioner</a></li>
+<li class="chapter" data-level="3.1.2" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#video-geogebra-hjlpeprogram-til-funktioner"><i class="fa fa-check"></i><b>3.1.2</b> Video Geogebra hjælpeprogram til funktioner</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#generel-forskift-linir-funktion"><i class="fa fa-check"></i><b>3.2</b> Generel Forskift liniær funktion</a></li>
+<li class="chapter" data-level="3.3" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#bestemmelse-af-forskrift-baseret-pa-2-punkter"><i class="fa fa-check"></i><b>3.3</b> Bestemmelse af forskrift baseret på 2 punkter</a></li>
+<li class="chapter" data-level="3.4" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#lsning-af-ligninger"><i class="fa fa-check"></i><b>3.4</b> Løsning af ligninger</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#video-lsning-af-ligninger"><i class="fa fa-check"></i><b>3.4.1</b> Video Løsning af ligninger</a></li>
+<li class="chapter" data-level="3.4.2" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#video-lsning-af-uligheder"><i class="fa fa-check"></i><b>3.4.2</b> Video Løsning af uligheder</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#ligninger-med-2-ubekendte."><i class="fa fa-check"></i><b>3.5</b> 2 ligninger med 2 ubekendte.</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#video-2-ligninger-med-2-ubekendte."><i class="fa fa-check"></i><b>3.5.1</b> Video 2 ligninger med 2 ubekendte.</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#udbuds--og-eftersprgselskurver"><i class="fa fa-check"></i><b>3.6</b> Udbuds- og efterspørgselskurver</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="polynomier.html"><a href="polynomier.html"><i class="fa fa-check"></i><b>4</b> Polynomier</a><ul>
+<li class="chapter" data-level="4.1" data-path="polynomier.html"><a href="polynomier.html#gradspolynomier"><i class="fa fa-check"></i><b>4.1</b> 2. Gradspolynomier</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="polynomier.html"><a href="polynomier.html#video-2.-gradspolynomier."><i class="fa fa-check"></i><b>4.1.1</b> Video 2. Gradspolynomier.</a></li>
+<li class="chapter" data-level="4.1.2" data-path="polynomier.html"><a href="polynomier.html#video-andengradsligninger."><i class="fa fa-check"></i><b>4.1.2</b> Video Andengradsligninger.</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="finansiel-regning.html"><a href="finansiel-regning.html"><i class="fa fa-check"></i><b>5</b> Finansiel regning</a><ul>
+<li class="chapter" data-level="5.0.1" data-path="finansiel-regning.html"><a href="finansiel-regning.html#nutidsvrdi-og-fremtidsvrdi-af-en-kapital"><i class="fa fa-check"></i><b>5.0.1</b> Nutidsværdi og fremtidsværdi af en kapital</a></li>
+<li class="chapter" data-level="5.1" data-path="finansiel-regning.html"><a href="finansiel-regning.html#annuiteter"><i class="fa fa-check"></i><b>5.1</b> Annuiteter</a></li>
+<li class="chapter" data-level="5.2" data-path="finansiel-regning.html"><a href="finansiel-regning.html#fremtidsvrdi-af-en-annuitet"><i class="fa fa-check"></i><b>5.2</b> Fremtidsværdi af en annuitet</a></li>
+<li class="chapter" data-level="5.3" data-path="finansiel-regning.html"><a href="finansiel-regning.html#nutidsvrdi-af-en-annuitet"><i class="fa fa-check"></i><b>5.3</b> Nutidsværdi af en annuitet</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="differentialregning.html"><a href="differentialregning.html"><i class="fa fa-check"></i><b>6</b> Differentialregning</a><ul>
+<li class="chapter" data-level="6.1" data-path="differentialregning.html"><a href="differentialregning.html#regneregler-differentiation"><i class="fa fa-check"></i><b>6.1</b> Regneregler differentiation</a></li>
+<li class="chapter" data-level="6.2" data-path="differentialregning.html"><a href="differentialregning.html#ekstremumspunkter"><i class="fa fa-check"></i><b>6.2</b> Ekstremumspunkter</a></li>
+<li class="chapter" data-level="6.3" data-path="differentialregning.html"><a href="differentialregning.html#lokale-og-globale-ekstremumspunkter"><i class="fa fa-check"></i><b>6.3</b> Lokale og globale ekstremumspunkter</a></li>
+<li class="chapter" data-level="6.4" data-path="differentialregning.html"><a href="differentialregning.html#konveksitet-og-konkavitet"><i class="fa fa-check"></i><b>6.4</b> Konveksitet og konkavitet</a></li>
+<li class="chapter" data-level="6.5" data-path="differentialregning.html"><a href="differentialregning.html#sammenhnge-avc-atc-tc-tr-mc-mr-og-mathbfpi"><i class="fa fa-check"></i><b>6.5</b> Sammenhænge AVC, ATC, TC, TR, MC, MR og <span class="math inline">\(\mathbf{\pi}\)</span></a></li>
+<li class="chapter" data-level="6.6" data-path="differentialregning.html"><a href="differentialregning.html#optimeringseksempel"><i class="fa fa-check"></i><b>6.6</b> Optimeringseksempel</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="excel-oversttelser.html"><a href="excel-oversttelser.html"><i class="fa fa-check"></i><b>7</b> Excel oversættelser</a></li>
+<li class="divider"></li>
+<li><a href="https://tepedu.dk" target="blank">tepedu</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">test</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="polynomier" class="section level1">
+<h1><span class="header-section-number">Kapitel 4</span> Polynomier</h1>
+<p>Polynomium betyder mange led. Grundformen for et n. gradspolynomium er:</p>
+<p><span class="math display">\[f\left( x \right) = a_{n}x^{n} + a_{n - 1}x^{n - 1} + \ldots + a_{1}x + a_{0}\]</span></p>
+<p><span class="math display">\[a_{0},\ldots a_{n} \in \mathbb{R,\ }n \in \mathbb{N,\ }a_{n} \neq 0\ \ \]</span></p>
+<p>Hvor a-erne kaldes koefficienterne, og n angiver graden af polynomiet. Bemærk alle eksponenterne tilhører de naturlige tal.</p>
+<p>En lineær funktion f.eks. <span class="math inline">\(f(x) = 3x + 4\)</span> kan også beskrives som et 1. gradspolynomium. Så er <span class="math inline">\(a_{1} = 3,a_{0} = 4.\)</span></p>
+<p><span class="math display">\[f\left( x \right) = 4x^{3} + 3x^{2} + 2x + 2\]</span></p>
+<p><img src="media/image21.png" style="width:6in;height:3.65132in" /></p>
+<p>Er et 3. gradspolynomium eller en 3. gradsfunktion, polynomiet har navn efter første leds eksponent, der er den største eksponent.</p>
+<div id="gradspolynomier" class="section level2">
+<h2><span class="header-section-number">4.1</span> 2. Gradspolynomier</h2>
+<div id="video-2.-gradspolynomier." class="section level3">
+<h3><span class="header-section-number">4.1.1</span> Video 2. Gradspolynomier.</h3>
+<br>
+<div class="embed-container">
+<iframe src="https://player.vimeo.com/video/282141026" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen>
+</iframe>
+</div>
+<p><br></p>
+</div>
+<div id="video-andengradsligninger." class="section level3">
+<h3><span class="header-section-number">4.1.2</span> Video Andengradsligninger.</h3>
+<br>
+<div class="embed-container">
+<iframe src="https://player.vimeo.com/video/282141011" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen>
+</iframe>
+</div>
+<p><br></p>
+<p>Vi benytter indenfor økonomi gerne 2. gradsfunktioner til at beskrive f.eks. omsætningsfunktioner.</p>
+<p><span class="math display">\[f\left( x \right) = - x^{2} + 3x + 4\]</span></p>
+<p>Er et 2. gradspolynomium/gradsfunktion. Kurven vi kan tegne i koordinatsystemet, kalder vi en parabel.</p>
+<p><img src="media/image23.png" style="width:6in;height:3.65132in" /></p>
+<p>Specielt for 2. gradsfunktioner navngiver vi ofte koefficienterne med a, b og c i stedet for <span class="math inline">\(a_{2},a_{1}\text{ og  }a_{0}\)</span>, dvs grundformen er:</p>
+<p><span class="math display">\[f\left( x \right) = ax^{2} + bx + c\]</span></p>
+<p>Der gælder at når a som i eksemplet ovenfor er mindre end 0 nemlig -1, siger vi at parablen konkav, eller at grenene/benene vender nedad. Man kan sige grafen krummer nedad. Har 2 gradsfunktionen koefficient <span class="math inline">\(a\)</span> større end 0, siger vi at parablen konveks eller at grenene vender opad.</p>
+<p>Vi definerer diskriminanten som <span class="math inline">\(d = b^{2} - 4ac\)</span></p>
+<p>For <span class="math inline">\(f\left( x \right) = 2x^{2} + 3x + 4\)</span> er a=-2, b=3 og c=4. Således bliver diskriminanten <span class="math inline">\(3^{2} - 4 \cdot - 1 \cdot 4 = 9 + 16 = 25\)</span></p>
+<p>Rødder er de x-værdier for hvilke <span class="math inline">\(ax^{2} + bx + c = 0\)</span>. Nulpunkterne er de punkter hvor polynomiets kurve skærer x-aksen. Antallet af rødder for et 2. gradspolynomium bestemmes af værdien af diskriminanten. Hvis:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Diskriminanten</th>
+<th align="left">Rødder</th>
+<th align="left">Parablen</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">negativ d&lt;0</td>
+<td align="left">Ingen</td>
+<td align="left">Rører ikke x-aksen</td>
+</tr>
+<tr class="even">
+<td align="left">0</td>
+<td align="left">1 dobbeltrod</td>
+<td align="left">Spidsen rører x-aksen</td>
+</tr>
+<tr class="odd">
+<td align="left">positiv d&gt;0</td>
+<td align="left">2 rødder</td>
+<td align="left">Passerer x-aksen</td>
+</tr>
+</tbody>
+</table>
+<p>I vores eksempel har vi en positiv diskriminant, man ved derfor at der er 2 rødder, dvs. man ved kurven krydser x-aksen to gange.</p>
+<p>Man kan også hurtigt afgøre præcis hvor kurven skærer y-aksen, da er x jo 0. Man ved derfor at leddene <span class="math inline">\(ax^{2}\text{ og bx}\)</span> vil være 0. Kurven vil derfor skære i y-aksen i c, i vores eksempel (0,4).</p>
+<p>Man kan uden at tegne 2. gradsfunktionens kurve afgøre at grenene vender nedad, hvor mange rødder der er, samt hvor på y aksen kurven skærer.</p>
+<p>Når vi skal bestemme rødderne og dermed nulpunkterne[^1], kan man benytte følgende formel:</p>
+<p><span class="math display">\[x = \frac{- b \pm \sqrt{d}}{2a}\]</span></p>
+<p>I vores eksempel får vi:</p>
+<p><span class="math display">\[x = \frac{- 3 \pm \sqrt{25}}{2 \cdot - 2} = \left\{ \begin{matrix}
+\frac{- 3 + 5}{- 2} = - 1 \\
+\frac{- 3 - 5}{- 2} = - \frac{- 8}{- 2} = 4 \\
+\end{matrix} \right.\ \]</span></p>
+<p>Det betyder altså at vi har nulpunkterne <span class="math inline">\(\left( - 1,0 \right)\ og\ (4,0)\)</span>.</p>
+<p>Vi kan bestemme toppunktet (der hvor parablen vender) ud fra formlen:</p>
+<p><span class="math display">\[T = \left( - \frac{b}{2a}; - \frac{d}{4a} \right)\]</span></p>
+<p>I eksemplet får vi:</p>
+<p><span class="math display">\[T = \left( - \frac{3}{2 \cdot - 1}; - \frac{25}{4 \cdot - 1} \right) = \left( \frac{3}{2};6\frac{1}{4} \right)\]</span></p>
+<p><img src="media/image24.png" style="width:6in;height:3.65132in" /></p>
+<p>Hvis vi ser på 2. gradspolynomiet, <span class="math inline">\(2x^{2} + 4x + 2\)</span>, er diskriminanten <span class="math inline">\(d = 4^{2} - 4 \cdot 2 \cdot 2\)</span>=0. Derfor har vi dobbeltrod, parablens toppunkt berører (krydser ikke) x-aksen, vi har derfor sammenfald mellem toppunkt og nulpunkt.</p>
+<p><img src="media/image25.png" style="width:6in;height:3.65132in" /></p>
+<p>Hvis 2. gradspolynomiet, er <span class="math inline">\(- 2x^{2} - 3x - 2\)</span>, har vi diskriminant <span class="math inline">\(d = - 7\)</span>. Derfor har funktionen ingen rødder.</p>
+<p><img src="media/image26.png" style="width:6in;height:3.65132in" /></p>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="funktioner-og-ligninger.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="finansiel-regning.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

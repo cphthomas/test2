@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>test</title>
+  <meta name="description" content="test">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="test" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="test" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="test" />
+  
+  <meta name="twitter:description" content="test" />
+  
+
+<meta name="author" content="Thomas Petersen">
+
+
+<meta name="date" content="2018-08-01">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="prev" href="finansiel-regning.html">
+<link rel="next" href="excel-oversttelser.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="libs/htmlwidgets-1.2/htmlwidgets.js"></script>
+<script src="libs/proj4js-2.3.15/proj4.js"></script>
+<link href="libs/highcharts-5.0.6/css/motion.css" rel="stylesheet" />
+<script src="libs/highcharts-5.0.6/highstock.js"></script>
+<script src="libs/highcharts-5.0.6/highcharts-3d.js"></script>
+<script src="libs/highcharts-5.0.6/highcharts-more.js"></script>
+<script src="libs/highcharts-5.0.6/modules/annotations.js"></script>
+<script src="libs/highcharts-5.0.6/modules/broken-axis.js"></script>
+<script src="libs/highcharts-5.0.6/modules/data.js"></script>
+<script src="libs/highcharts-5.0.6/modules/drilldown.js"></script>
+<script src="libs/highcharts-5.0.6/modules/exporting.js"></script>
+<script src="libs/highcharts-5.0.6/modules/funnel.js"></script>
+<script src="libs/highcharts-5.0.6/modules/heatmap.js"></script>
+<script src="libs/highcharts-5.0.6/modules/map.js"></script>
+<script src="libs/highcharts-5.0.6/modules/no-data-to-display.js"></script>
+<script src="libs/highcharts-5.0.6/modules/offline-exporting.js"></script>
+<script src="libs/highcharts-5.0.6/modules/solid-gauge.js"></script>
+<script src="libs/highcharts-5.0.6/modules/treemap.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/annotations.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/draggable-legend.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/draggable-points.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/export-csv.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/grouped-categories.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/motion.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/pattern-fill-v2.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/tooltip-delay.js"></script>
+<script src="libs/highcharts-5.0.6/custom/reset.js"></script>
+<script src="libs/highcharts-5.0.6/custom/symbols-extra.js"></script>
+<script src="libs/highcharts-5.0.6/custom/text-symbols.js"></script>
+<link href="libs/fontawesome-4.5.0/font-awesome.min.css" rel="stylesheet" />
+<link href="libs/htmlwdgtgrid-1/htmlwdgtgrid.css" rel="stylesheet" />
+<script src="libs/highchart-binding-0.5.0/highchart.js"></script>
+<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="libs/datatables-binding-0.4/datatables.js"></script>
+<link href="libs/dt-core-1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.10.16/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.10.16/js/jquery.dataTables.min.js"></script>
+<link href="libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
+<link href="libs/dygraphs-1.1.1/dygraph.css" rel="stylesheet" />
+<script src="libs/dygraphs-1.1.1/dygraph-combined.js"></script>
+<script src="libs/moment-2.8.4/moment.js"></script>
+<script src="libs/moment-timezone-0.2.5/moment-timezone-with-data.js"></script>
+<script src="libs/moment-fquarter-1.0.0/moment-fquarter.min.js"></script>
+<script src="libs/dygraphs-binding-1.1.1.4/dygraphs.js"></script>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href=""https://tepedu.dk"">tepedu</a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#section"></a></li>
+<li class="chapter" data-level="1" data-path="indledning.html"><a href="indledning.html"><i class="fa fa-check"></i><b>1</b> Indledning</a></li>
+<li class="chapter" data-level="2" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html"><i class="fa fa-check"></i><b>2</b> Procenter, indekstal og regneregler</a><ul>
+<li class="chapter" data-level="2.1" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#procentregneregler"><i class="fa fa-check"></i><b>2.1</b> Procentregneregler</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#video-procentregning"><i class="fa fa-check"></i><b>2.1.1</b> Video procentregning</a></li>
+<li class="chapter" data-level="2.1.2" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#video-excel-basisvideo."><i class="fa fa-check"></i><b>2.1.2</b> Video Excel basisvideo.</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#indekstal"><i class="fa fa-check"></i><b>2.2</b> Indekstal</a></li>
+<li class="chapter" data-level="2.3" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#procentpoint"><i class="fa fa-check"></i><b>2.3</b> Procentpoint</a></li>
+<li class="chapter" data-level="2.4" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#reduktionsregneregler"><i class="fa fa-check"></i><b>2.4</b> Reduktionsregneregler</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#video-regnearternes-hieraki."><i class="fa fa-check"></i><b>2.4.1</b> Video regnearternes hieraki.</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#brkregneregler"><i class="fa fa-check"></i><b>2.5</b> Brøkregneregler</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#video-brkregneregler"><i class="fa fa-check"></i><b>2.5.1</b> Video Brøkregneregler</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#potensregneregler"><i class="fa fa-check"></i><b>2.6</b> Potensregneregler</a><ul>
+<li class="chapter" data-level="2.6.1" data-path="procenter-indekstal-og-regneregler.html"><a href="procenter-indekstal-og-regneregler.html#video-potensregneregler"><i class="fa fa-check"></i><b>2.6.1</b> Video potensregneregler</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html"><i class="fa fa-check"></i><b>3</b> Funktioner og ligninger</a><ul>
+<li class="chapter" data-level="3.1" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#linere-funktioner"><i class="fa fa-check"></i><b>3.1</b> Lineære funktioner</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#video-funktioner"><i class="fa fa-check"></i><b>3.1.1</b> Video funktioner</a></li>
+<li class="chapter" data-level="3.1.2" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#video-geogebra-hjlpeprogram-til-funktioner"><i class="fa fa-check"></i><b>3.1.2</b> Video Geogebra hjælpeprogram til funktioner</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#generel-forskift-linir-funktion"><i class="fa fa-check"></i><b>3.2</b> Generel Forskift liniær funktion</a></li>
+<li class="chapter" data-level="3.3" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#bestemmelse-af-forskrift-baseret-pa-2-punkter"><i class="fa fa-check"></i><b>3.3</b> Bestemmelse af forskrift baseret på 2 punkter</a></li>
+<li class="chapter" data-level="3.4" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#lsning-af-ligninger"><i class="fa fa-check"></i><b>3.4</b> Løsning af ligninger</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#video-lsning-af-ligninger"><i class="fa fa-check"></i><b>3.4.1</b> Video Løsning af ligninger</a></li>
+<li class="chapter" data-level="3.4.2" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#video-lsning-af-uligheder"><i class="fa fa-check"></i><b>3.4.2</b> Video Løsning af uligheder</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#ligninger-med-2-ubekendte."><i class="fa fa-check"></i><b>3.5</b> 2 ligninger med 2 ubekendte.</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#video-2-ligninger-med-2-ubekendte."><i class="fa fa-check"></i><b>3.5.1</b> Video 2 ligninger med 2 ubekendte.</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="funktioner-og-ligninger.html"><a href="funktioner-og-ligninger.html#udbuds--og-eftersprgselskurver"><i class="fa fa-check"></i><b>3.6</b> Udbuds- og efterspørgselskurver</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="polynomier.html"><a href="polynomier.html"><i class="fa fa-check"></i><b>4</b> Polynomier</a><ul>
+<li class="chapter" data-level="4.1" data-path="polynomier.html"><a href="polynomier.html#gradspolynomier"><i class="fa fa-check"></i><b>4.1</b> 2. Gradspolynomier</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="polynomier.html"><a href="polynomier.html#video-2.-gradspolynomier."><i class="fa fa-check"></i><b>4.1.1</b> Video 2. Gradspolynomier.</a></li>
+<li class="chapter" data-level="4.1.2" data-path="polynomier.html"><a href="polynomier.html#video-andengradsligninger."><i class="fa fa-check"></i><b>4.1.2</b> Video Andengradsligninger.</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="finansiel-regning.html"><a href="finansiel-regning.html"><i class="fa fa-check"></i><b>5</b> Finansiel regning</a><ul>
+<li class="chapter" data-level="5.0.1" data-path="finansiel-regning.html"><a href="finansiel-regning.html#nutidsvrdi-og-fremtidsvrdi-af-en-kapital"><i class="fa fa-check"></i><b>5.0.1</b> Nutidsværdi og fremtidsværdi af en kapital</a></li>
+<li class="chapter" data-level="5.1" data-path="finansiel-regning.html"><a href="finansiel-regning.html#annuiteter"><i class="fa fa-check"></i><b>5.1</b> Annuiteter</a></li>
+<li class="chapter" data-level="5.2" data-path="finansiel-regning.html"><a href="finansiel-regning.html#fremtidsvrdi-af-en-annuitet"><i class="fa fa-check"></i><b>5.2</b> Fremtidsværdi af en annuitet</a></li>
+<li class="chapter" data-level="5.3" data-path="finansiel-regning.html"><a href="finansiel-regning.html#nutidsvrdi-af-en-annuitet"><i class="fa fa-check"></i><b>5.3</b> Nutidsværdi af en annuitet</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="differentialregning.html"><a href="differentialregning.html"><i class="fa fa-check"></i><b>6</b> Differentialregning</a><ul>
+<li class="chapter" data-level="6.1" data-path="differentialregning.html"><a href="differentialregning.html#regneregler-differentiation"><i class="fa fa-check"></i><b>6.1</b> Regneregler differentiation</a></li>
+<li class="chapter" data-level="6.2" data-path="differentialregning.html"><a href="differentialregning.html#ekstremumspunkter"><i class="fa fa-check"></i><b>6.2</b> Ekstremumspunkter</a></li>
+<li class="chapter" data-level="6.3" data-path="differentialregning.html"><a href="differentialregning.html#lokale-og-globale-ekstremumspunkter"><i class="fa fa-check"></i><b>6.3</b> Lokale og globale ekstremumspunkter</a></li>
+<li class="chapter" data-level="6.4" data-path="differentialregning.html"><a href="differentialregning.html#konveksitet-og-konkavitet"><i class="fa fa-check"></i><b>6.4</b> Konveksitet og konkavitet</a></li>
+<li class="chapter" data-level="6.5" data-path="differentialregning.html"><a href="differentialregning.html#sammenhnge-avc-atc-tc-tr-mc-mr-og-mathbfpi"><i class="fa fa-check"></i><b>6.5</b> Sammenhænge AVC, ATC, TC, TR, MC, MR og <span class="math inline">\(\mathbf{\pi}\)</span></a></li>
+<li class="chapter" data-level="6.6" data-path="differentialregning.html"><a href="differentialregning.html#optimeringseksempel"><i class="fa fa-check"></i><b>6.6</b> Optimeringseksempel</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="excel-oversttelser.html"><a href="excel-oversttelser.html"><i class="fa fa-check"></i><b>7</b> Excel oversættelser</a></li>
+<li class="divider"></li>
+<li><a href="https://tepedu.dk" target="blank">tepedu</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">test</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="differentialregning" class="section level1">
+<h1><span class="header-section-number">Kapitel 6</span> Differentialregning</h1>
+<br>
+<div class="embed-container">
+<iframe src="https://player.vimeo.com/video/282141105" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen>
+</iframe>
+</div>
+<p><br></p>
+<p>Når man differentierer en funktion f, kaldes resultatet &quot; den afledede af f mht. x &quot; eller “f mærke af x”. At differentiere en funktion mht. til x, er en operation, hvor vi finder en ny funktion, vi skriver <span class="math inline">\(f^{&#39;}\left( x \right)\)</span>, der er en del teori og beviser omkring dette, som vi ikke gennemgår her.</p>
+<p>Hvis vi ser på grafen nedenfor, kan man se at funktionsværdien falder fra 0 til -1, når x ændres fra 0,5 til 1. Når x ændres fra 1 til 1,5 falder funktionsværdien fra -1 til -10,125.</p>
+<p><img src="media/image49.png" style="width:6in;height:3.65132in" /></p>
+<p>En funktion kan altså vokse eller aftage med forskellig hastighed i forskellige punkter. Denne punktvise hastighed kan vi beskrive ved hjælp differentialregning,</p>
+<p>Vi kan beskrive denne hastighed af funktionsværdien i et punkt <span class="math inline">\(\left( f\left( x \right),x \right)\\)</span>vha. tangentens hældning i punktet. En tangent er en ret linje, der berører en kurve i et punkt, og har samme hældning som kurven i punktet. Vi kan se nedenfor, at i punktet (1,-1), har tangenten hældning -6. Denne hældning finder vi ved at differentiere funktionen f(x), vi kalder som nævnt den differentierede funktion &quot; f mærke af x &quot; og skriver <span class="math inline">\(f&#39;(x)\)</span>.</p>
+<p><span class="math display">\[f\left( x \right) = - 2x^{5} + x^{4}\]</span></p>
+<p><span class="math display">\[f^{&#39;}\left( x \right) = 5 \cdot - 2x^{5 - 1} + 4 \cdot x^{4 - 1} = - 10x^{4} + 4x^{3}\]</span></p>
+<p>Her er benyttet en del regler som vi vender tilbage til om et øjeblik.</p>
+<p>Når vi har fundet f mærke af x, indsætter vi x værdien, fra punktet vi søger at finde hastigheden for. Da punktet er (1,-1), indsætter i altså 1 i <span class="math inline">\(f&#39;(x)\)</span></p>
+<p><span class="math display">\[f^{&#39;}\left( 1 \right) = - 10 \cdot 1^{4} + 4 \cdot 1^{3} = - 10 + 4 = - 6\]</span></p>
+<p>Det betyder at tangentens hældning i punktet (1,-1)[^4] -6, eller løst formuleret hastigheden i punktet er -6. Dette er tegnet ind nedenfor.</p>
+<p><img src="media/image50.png" style="width:6in;height:3.65132in" /></p>
+<div id="regneregler-differentiation" class="section level2">
+<h2><span class="header-section-number">6.1</span> Regneregler differentiation</h2>
+<p>Nedenstående skema giver en oversigt over gængse differentiationsregneregler, samt eksempler, k er en konstant <span class="math inline">\(a,b \in \mathbb{R,\ }n \in \mathbb{N}\)</span>.</p>
+<table>
+<colgroup>
+<col width="34%" />
+<col width="65%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><span class="math display">\[f(x)\]</span></th>
+<th><span class="math display">\[f&#39;(x)\]</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math display">\[k\]</span></td>
+<td><span class="math display">\[0\]</span></td>
+</tr>
+<tr class="even">
+<td><span class="math display">\[x\]</span></td>
+<td><span class="math display">\[1\]</span></td>
+</tr>
+<tr class="odd">
+<td><p><span class="math display">\[\text{ax}\]</span></p>
+<p><span class="math display">\[3x\]</span></p></td>
+<td><p><span class="math display">\[a\]</span></p>
+<p><span class="math display">\[3\]</span></p></td>
+</tr>
+<tr class="even">
+<td><p><span class="math display">\[x^{n}\]</span></p>
+<p><span class="math display">\[x^{3}\]</span></p></td>
+<td><p><span class="math display">\[n \cdot x^{n - 1}\]</span></p>
+<p><span class="math display">\[3x^{2}\]</span></p></td>
+</tr>
+<tr class="odd">
+<td><span class="math display">\[e^{x}\]</span></td>
+<td><span class="math display">\[e^{x}\]</span></td>
+</tr>
+<tr class="even">
+<td><span class="math display">\[\ln\left( x \right)\]</span></td>
+<td><span class="math display">\[\frac{1}{x}\]</span></td>
+</tr>
+<tr class="odd">
+<td><p><span class="math display">\[\frac{1}{x^{n}} = x^{- n}\]</span></p>
+<p><span class="math display">\[\frac{1}{x^{2}} = x^{- 2}\]</span></p></td>
+<td><p><span class="math display">\[- nx^{n - 1}\]</span></p>
+<p><span class="math display">\[- 2x^{- 3}\]</span></p></td>
+</tr>
+<tr class="even">
+<td><p><span class="math display">\[\sqrt[n]{x} = x^{\frac{1}{n}}\]</span></p>
+<p><span class="math display">\[\sqrt[3]{x} = x^{\frac{1}{3}}\]</span></p></td>
+<td><p><span class="math display">\[\frac{1}{n}x^{\frac{1}{n} - 1}\]</span></p>
+<p><span class="math display">\[\frac{1}{3}x^{\frac{1}{3} - 1} = \frac{1}{3}x^{- \frac{2}{3}}\]</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>Vi har herudover følgende vigtige regneregler:</p>
+<p><span class="math display">\[\left( f\left( x \right) \pm g\left( x \right) \right)^{&#39;} = f^{&#39;}\left( x \right) \pm g&#39;(x)\]</span></p>
+<p>f.eks.</p>
+<p><span class="math display">\[\left( 3x^{2} - 2x \right)^{&#39;} = 6x - 2\]</span></p>
+<p>Produktreglen:</p>
+<p><span class="math display">\[\left( f\left( x \right) \cdot g\left( x \right) \right)^{&#39;} = f^{&#39;}\left( x \right) \cdot g\left( x \right) + f\left( x \right) \cdot g&#39;(x)\]</span></p>
+<p>f.eks.</p>
+<p><span class="math display">\[\left( 3x^{4} \cdot \ln\left( x \right) \right)^{&#39;} = 12x^{3} \cdot \ln\left( x \right) + 3x^{4} \cdot \frac{1}{x} = 12x^{3} \cdot \ln\left( x \right) + 3x^{3}\]</span></p>
+<p>Kvotientregnereglen:</p>
+<p><span class="math display">\[\left( \frac{f\left( x \right)}{g\left( x \right)} \right)^{&#39;} = \frac{f^{&#39;}\left( x \right) \cdot g\left( x \right) - f\left( x \right) \cdot g^{&#39;}\left( x \right)}{\left( g\left( x \right) \right)^{2}}\]</span></p>
+<p>f.eks.</p>
+<p><span class="math display">\[{\left( \frac{2x^{2} - 3x + 3}{x + 5} \right)^{&#39;} = \frac{\left( 4x - 3 \right) \cdot \left( x + 5 \right) - \left( 2x^{2} - 3x + 3 \right) \cdot 1}{\left( x - 5 \right)^{2}} = }{\frac{4x^{2} + 20x - 3x - 15 - 2x^{2} + 3x - 3}{\left( x - 5 \right)^{2}} = \frac{2x^{2} + 20x - 18}{\left( x - 5 \right)^{2}}}\]</span></p>
+<!-- Differentiation af sammensatte funktioner. -->
+<!-- ------------------------------------------ -->
+<!-- En funktion f.eks. $$h\left( x \right) = \sqrt{3x^{2} + x}$$  -->
+<!-- kaldes en sammensat funktion af de to funktioner den ydre  -->
+<!-- $$f\left( x \right) = \sqrt{\ldots}$$  -->
+<!-- og den indre $$g\left( x \right) = 3x^{2} + x$$ -->
+<!-- Man skriver det som: -->
+<!-- $$h\left( x \right) = f\left( g\left( x \right) \right)$$ -->
+<!-- og siger f af g af x, eller  -->
+<!-- $$h\left( x \right) = \left( f \circ g \right)\left( x \right)$$" -->
+<!-- f bolle g -->
+<!-- Man kan finde den afledte af en sammensat funktion som: -->
+<!-- $$\left( h\left( x \right) \right)^{'} = f^{'}\left( g\left( x \right) \right) \cdot g'(x)$$ -->
+<!-- I vores eksempel får vi altså: -->
+<!-- $$\left( \sqrt{3x^{2} + x} \right)^{'} = \left( \left( 3x^{2} + x \right)^{\frac{1}{2}} \right)^{'} =$$ -->
+<!-- $${\frac{1}{2}\left( 3x^{2} + x \right)^{\frac{1}{2} - 1} \cdot (6x + 1) = \frac{12x + 2}{\sqrt{3x^{2} + x}}}$$ -->
+<!-- Funktionen -->
+<!-- $$e^{3x^{2}}$$ -->
+<!-- $$g\left( x \right) = 3x^{2},\ f\left( x \right) = e^{\ldots}$$ -->
+<!-- Så den afledede bliver: -->
+<!-- $$e^{3x^{2}} \cdot 6x$$ -->
+<!-- Man kan også med fordel benytte differentiation af sammensatte funktioner i forbindelse med differentiationen andre udtryk f.eks. brøker. -->
+<!-- $$\frac{2x^{2} + 3x + 3}{\sqrt{4x^{3} + 2x^{2}}}$$ -->
+<!-- Her kan man særskilt afgøre hvad den afledte til nævneren i brøken bliver, og herefter fortsætte med at finde den afledte til brøken. -->
+<!-- Man kan med fordel kontrollere sine resultater på <a href="https://www.wolframalpha.com" target="_blank">www.wolframalpha.com her.</a>. Det er gratis at bruge internetversionen, der naturligvis ikke fungerer offline. -->
+<!-- Husk hvis man kan huske potensregnereglerne kan man spare sig selv for bøvl, f.eks. kan man finde den afledede til $f\left( x \right) = \frac{1}{9}\left( 3x^{2} \right)^{3}$ nemmere ved at reducere før man differentierer. -->
+<!-- $$\frac{1}{9}\left( 3x^{2} \right)^{3} = \frac{1}{9} \cdot 27 \cdot x^{6} = 3x^{6}$$ -->
+<!-- Dette udtryk kan jo differentieres direkte til$\ 18x^{5}$. -->
+</div>
+<div id="ekstremumspunkter" class="section level2">
+<h2><span class="header-section-number">6.2</span> Ekstremumspunkter</h2>
+<p>Indenfor økonomi er det vigtigt at kunne finde den afledede, når <span class="math inline">\(f^{&#39;}\left( x \right) = 0\\)</span>, har vi et globalt eller lokalt, minimum eller maksimum. Man vil således være i stand til at bestemme, f.eks. maksimal omsætning for en omsætningsfunktion vha. differentialregning. Antag vi har en pris/afsætningsfunktion <span class="math inline">\(f\left( x \right) = - 0.25x + 10\)</span>. Udfra denne kan vi danne omsætningsfunktionen.</p>
+<blockquote>
+<p>Omsætning er jo per definition pris gange afsætning. Sælger man 3 is til 10 kr. er afsætningen 3 stk. og omsætningen 30 kr.</p>
+</blockquote>
+<p>Afsætningen er vores x-værdi, og den tilsvarende pris er jo vores funktionsværdi f(x). Derfor kan vi bestemme omsætningsfunktionen som</p>
+<p><span class="math display">\[\text{Oms}\left( x \right) = x \cdot f\left( x \right) = x\left( - 0.25x + 10 \right) = - 0.25x^{2} + 10x\]</span></p>
+<p>Vi kan nu bestemme den afledte til omsætningsfunktionen som:</p>
+<p><span class="math display">\[\text{Om}s^{&#39;}\left( x \right) = - 0.5x + 10\]</span></p>
+<p>Man kalder også den afledte til omsætningsfunktionen for GROMS grænseomsætningen eller MR marginal revenue, funktionsværdierne for <span class="math inline">\(\text{Om}s^{&#39;}\left( x \right)\)</span>, angiver hældningerne for tangenterne på <span class="math inline">\(Oms(x)\)</span> kurven for forskellige afsætningsværdier. GROMS fortæller hvor meget omsætningen vokser med når afsætningen x eller Q vokser med en enhed.</p>
+<blockquote>
+<p>Hvis en issælger har MR på 5 kr. Betyder det at omsætningen vokser med 5 kr. hvis afsætningen vokser med en is.</p>
+</blockquote>
+<p><img src="media/image51.png" style="width:6in;height:3.65132in" /></p>
+<p>Tangentens hældninger angiver funktionens fart, når tangentens hældning er 0, vokser omsætningen ikke. Nedenfor er indtegnet 3 tangenter med de tilsvarende hældninger. Ved en afsætning <span class="math inline">\(x = 5\)</span> er tangenthældningen 7,5, omsætningen vokser altså. Ved en afsætning <span class="math inline">\(x = 20\)</span> er tangenthældningen 0, omsætningen har altså nået et ekstremum i dette tilfælde et globalt maksimum. Ved en afsætning <span class="math inline">\(x = 30\)</span> er tangenthældningen -5, omsætningen er altså aftagende. Man kan også se på <span class="math inline">\(Oms&#39;(x) - GROMS - MR\)</span> kurven, at denne er lig med 0, netop når x er 20.</p>
+<p><img src="media/image52.png" style="width:6in;height:3.65132in" /></p>
+<p>Normalt vil man for at bestemme ekstremumspunkter for en funktion blot, differentiere denne og sætte den afledte funktion lig med 0, så kan man bestemme de x’er for hvilket ligningen er sand. I vores eksempel, ville vi altså bestemme <span class="math inline">\(\text{Om}s^{&#39;}\left( x \right).\)</span></p>
+<p><span class="math display">\[- 0,5x + 10\]</span></p>
+<p>Og sætte udtrykket lig med 0 og løse mht. x</p>
+<p><span class="math display">\[- 0,5x + 10 = 0\]</span></p>
+<p><span class="math display">\[x = 20\]</span></p>
+</div>
+<div id="lokale-og-globale-ekstremumspunkter" class="section level2">
+<h2><span class="header-section-number">6.3</span> Lokale og globale ekstremumspunkter</h2>
+<p>Hvis vi har funktioner med flere ekstremaer, må man for at afgøre om der er tale om lokale/globale ekstremaer bestemme funktionsværdierne for x-værdi kandidaterne. I tegningen nedenfor har vi et 4-gradspolynomium <span class="math inline">\(f\left( x \right) = x^{4} - 3x^{3} + 2x^{2} + 3\)</span>, her kan man se at den afledede $f^{’}( x ) =  4x^{3} - 9x^{2} + 4x $ er tegnet ind med rødt, det fremgår at <span class="math inline">\(f&#39;(x)\)</span> har 3 nulpunkter, hvorfor vi kan konkludere at <span class="math inline">\(f\left( x \right)\)</span> har 3 ekstremaer, lokalt minimum i <span class="math inline">\((0;3),\\)</span>lokalt maksimum i <span class="math inline">\((0.6069;3.2017)\)</span> og globalt minimum i (1.6404; 2.3803). Et globalt ekstremum er altså funktionens største eller mindste værdi i hele definitionsmængden. Et lokalt ekstremum er altså funktionens største eller mindste værdi i en omegn omkring punktet.</p>
+<p><img src="media/image53.png" style="width:6in;height:3.65132in" /></p>
+</div>
+<div id="konveksitet-og-konkavitet" class="section level2">
+<h2><span class="header-section-number">6.4</span> Konveksitet og konkavitet</h2>
+<p>Vi kan ved finde den dobbeltaflede (dvs. differentiere 2 gange) for en funktion , afgøre hvornår en funktion er konkav eller konveks. Dette kan direkte fortælle os om en funktion har maksimum eller minimum i et ekstremumspunkt. I intervaller hvor en funktion er konveks dvs. krummer opad vil ekstremumspunkter være minima, i disse intervaller vil den dobbeltafledede være positiv. I intervaller hvor en funktion er konkav dvs. krummer nedad vil ekstremumspunkter være maksima, i disse intervaller vil den dobbeltafledede være negativ. Når <span class="math inline">\(f^{&#39;&#39;}\left( x \right) = 0\\)</span> skifter grafen mellem konveks og konkav eller omvendt, vi siger grafen har vendetanget. I eksemplet nedenfor kan man se <span class="math inline">\(f\left( x \right)\)</span> er blå når den er konkav, og rød når den er konveks, hvilket stemmer overens med <span class="math inline">\(f&#39;&#39;(x)\)</span>, der er hhv. negativ for <span class="math inline">\(x \in \rbrack - \infty;1\lbrack\)</span> og positiv for <span class="math inline">\(x \in \rbrack 1;\infty\lbrack\)</span>.</p>
+<p><img src="media/image54.png" style="width:6in;height:3.65132in" /></p>
+</div>
+<div id="sammenhnge-avc-atc-tc-tr-mc-mr-og-mathbfpi" class="section level2">
+<h2><span class="header-section-number">6.5</span> Sammenhænge AVC, ATC, TC, TR, MC, MR og <span class="math inline">\(\mathbf{\pi}\)</span></h2>
+<p>Vi kan ud fra pris- afsætningskurven P(Q), altså kurven der angiver hvilken mængde man kan afsætte, finde TR(Q) ved at gange med Q.</p>
+<p><img src="media/image55.png" style="width:6in;height:3.77441in" /></p>
+<p>Q er quantity/mængde, der produceres og afsættes ud af x-aksen denne uafhængige variabel styrer værdien af de nedenstående størrelser:</p>
+<p>FC fixed costs (dansk FO faste omkostninger)</p>
+<p>VC total variable costs (dansk VO variable omkostninger).</p>
+<p>TC total costs, kan beregnes som VC + FC</p>
+<p>AVC average variable costs (dansk VE variable enhedsomkostninger) betyder den gennemsnitlige variable omkostning pr. stk., denne kan beregnes som <span class="math inline">\(AVC = \frac{\text{VC}}{Q}\)</span></p>
+<p>ATC average total costs kan beregnes som <span class="math inline">\(ATC = \frac{\text{TC}}{Q}\)</span></p>
+<p>MC marginal cost (dansk GROMK grænseomkostninger) betyder hvad koster det at producere en enhed mere. <span class="math inline">\(MC = \frac{\text{dTC}}{\text{dQ}} = \frac{\text{dVC}}{\text{dQ}}\)</span>, grafisk er MC hældningen af tangenten i et punkt på TC kurven.</p>
+<p>Nedenfor er ovenstående sammenhænge illustreret, bemærk bl.a. at for en afsætning Q på 8, er tangenten med hældning MC indtegnet på både TC og VC kurverne. Her kan man se hvordan vi vil beregne MC ud fra både TC og VC som nævnt ovenfor.</p>
+<p><img src="media/image56.png" style="width:6in;height:3.78539in" /></p>
+<p>I nedenstående plot er ATC og AVC tegnet ind sammen med TC og VC.</p>
+<p><img src="media/image57.png" style="width:6in;height:3.78539in" /></p>
+</div>
+<div id="optimeringseksempel" class="section level2">
+<h2><span class="header-section-number">6.6</span> Optimeringseksempel</h2>
+<p>TR total revenue er omsætningen.</p>
+<p>MR marginal revenue (dansk Groms grænseomsætningen ) betyder, hvad øges omsætningen med, når der afsættes en enhed mere. <span class="math inline">\(MR = \frac{\text{dTR}}{\text{dQ}}\)</span> , grafisk er MR hældningen af tangenten i et punkt på TR kurven.</p>
+<p>I tegningen nedenfor er indtegnet en blå TR kurve og en rød MR kurve og 2 sorte tangenter, hvor MR er hhv. 25 og 0. X-aksen angiver afsætningen Q, y-aksen omsætningen. Man kan se at der hvor MR kurven skærer x-aksen (dvs er 0), har TR-kurven maksimum, for denne afsætning Q=45 er hældningen på tangenten 0. Bemærk MR er den afledte af TR. Den maksimale omsætning bliver <span class="math inline">\(\text{TR}\left( 45 \right) = - 0,5{\cdot 45}^{2} + 45 \cdot 45 = 1012,5\)</span>.</p>
+<p><img src="media/image58.png" style="width:6in;height:3.65194in" /></p>
+<p>Hvis vi også har en TC total costs funktion f.eks. <span class="math inline">\(TC = 0,25Q^{3} - 6Q^{2} + 60Q\)</span>, kan vi udfra denne beregne profitfunktion π som.</p>
+<p><span class="math display">\[\pi = TR - TC = - 0,5Q^{2} + 45Q - \left( 0,25Q^{3} - 6Q^{2} + 60Q \right) =\]</span></p>
+<p><span class="math display">\[- 0,25Q^{3} + 5,5Q^{2} - 15Q\]</span></p>
+<p><img src="media/image59.png" style="width:6in;height:3.65232in" /></p>
+<p>Når vi skal finde den optimale profit, skal vi altså finde maximum for π –funktionen, kan vi differentiere denne, og bestemme hvor den afledede π’ er 0. Der hvor π’ er 0 ligger tangenten vandret, her har π ekstremumspunkter. For at afgøre om der er tale om maksimum eller minimum kan man tage den dobbeltafledede π’‘, for intervaller hvor den π’’ er negativ, er π konkav (krummer nedad) i disse intervaller vil der være et maksimum.</p>
+<p><img src="media/image60.png" style="width:6in;height:3.75168in" /></p>
+<p>Hvis vi skal finde maksimum ved udregning, finder vi π’ og finder nulpunkter for denne, herefter π’’ bestemmer fortegn for nulpunkter, nulpunkt med negativ dobbeltafledet er et maksimum.</p>
+<p><span class="math display">\[\pi^{&#39;} = 3 \cdot - 0,25Q^{3 - 1} + 2 \cdot 5,5Q^{2 - 1} - 15 = - 0,75Q^{2} + 11Q - 15\]</span></p>
+<p><span class="math display">\[rø\ \ dder = \left\{ \begin{matrix}
+\frac{- 11 + \sqrt{11^{2} - 4 \cdot - 0,75 \cdot - 15}}{2 \cdot - 0,75} = \frac{- 11 + \sqrt{121 - 45}}{- 1,5} \approx 1,52 \\
+\frac{- 11 - \sqrt{11^{2} - 4 \cdot - 0,75 \cdot - 15}}{2 \cdot - 0,75} = \frac{- 11 - \sqrt{121 - 45}}{- 1,5} \approx 13,15 \\
+\end{matrix} \right.\ \]</span></p>
+<p>Vi kan se på tegningen ovenfor, at rødderne stemmer overens med nulpunkterne. Vi udregner nu <span class="math inline">\(\pi&#39;&#39;\)</span>.</p>
+<p><span class="math display">\[\pi^{&#39;&#39;} = 2 \cdot - 0,75Q^{2 - 1} + 11 = - 1,5Q + 11\]</span></p>
+<p>Vi ser at <span class="math inline">\(\pi&#39;&#39;\left( 1,52 \right) = - 1,5 \cdot 1,52 + 11 = 8.72\)</span> dvs. π er konveks for <span class="math inline">\(Q = 1,52\)</span>, dette punkt er altså et minimum.</p>
+<p>Vi ser at <span class="math inline">\(\pi&#39;&#39;\left( 13,15 \right) = - 1,5 \cdot 13,15 + 11 = - 8,73\)</span> dvs. π er konkav for <span class="math inline">\(Q = - 8.725\)</span>, dette punkt er altså et maksimum.</p>
+<p>Man kan nu udregne den maksimale profit som <span class="math inline">\(\pi\left( 13,15 \right) \approx 185,34\)</span>.</p>
+<p>Bemærk at man kan også bestemme den optimale afsætning Q, ved at bestemme MC og MR, og sætte disse lig med hinanden, se nedenstående tegning.</p>
+<p><img src="media/image61.png" style="width:6in;height:3.75168in" /></p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="finansiel-regning.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="excel-oversttelser.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
